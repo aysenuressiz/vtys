@@ -45,9 +45,9 @@
             // projeAdi
             // 
             this.projeAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.projeAdi.Location = new System.Drawing.Point(528, 46);
+            this.projeAdi.Location = new System.Drawing.Point(528, 56);
             this.projeAdi.Name = "projeAdi";
-            this.projeAdi.Size = new System.Drawing.Size(251, 30);
+            this.projeAdi.Size = new System.Drawing.Size(375, 30);
             this.projeAdi.TabIndex = 0;
             // 
             // contextMenuStrip1
@@ -59,37 +59,35 @@
             // projeAçiklamasi
             // 
             this.projeAçiklamasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.projeAçiklamasi.Location = new System.Drawing.Point(528, 119);
+            this.projeAçiklamasi.Location = new System.Drawing.Point(528, 109);
+            this.projeAçiklamasi.Multiline = true;
             this.projeAçiklamasi.Name = "projeAçiklamasi";
-            this.projeAçiklamasi.Size = new System.Drawing.Size(251, 30);
+            this.projeAçiklamasi.Size = new System.Drawing.Size(375, 175);
             this.projeAçiklamasi.TabIndex = 2;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(313, 46);
+            this.label1.Location = new System.Drawing.Point(313, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 30);
             this.label1.TabIndex = 6;
             this.label1.Text = "PROJE ADI:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(310, 234);
+            this.label2.Location = new System.Drawing.Point(310, 303);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 30);
             this.label2.TabIndex = 7;
             this.label2.Text = "BAŞLANGIÇ TARİHİ:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(310, 320);
+            this.label3.Location = new System.Drawing.Point(310, 345);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(157, 30);
             this.label3.TabIndex = 8;
             this.label3.Text = "BİTİŞ TARİHİ:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label4
             // 
@@ -98,11 +96,10 @@
             this.label4.Size = new System.Drawing.Size(157, 30);
             this.label4.TabIndex = 10;
             this.label4.Text = "PROJE AÇIKLAMASI:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // projeEkle
             // 
-            this.projeEkle.Location = new System.Drawing.Point(619, 415);
+            this.projeEkle.Location = new System.Drawing.Point(676, 415);
             this.projeEkle.Name = "projeEkle";
             this.projeEkle.Size = new System.Drawing.Size(128, 46);
             this.projeEkle.TabIndex = 11;
@@ -112,7 +109,7 @@
             // 
             // geri
             // 
-            this.geri.Location = new System.Drawing.Point(422, 415);
+            this.geri.Location = new System.Drawing.Point(497, 415);
             this.geri.Name = "geri";
             this.geri.Size = new System.Drawing.Size(128, 46);
             this.geri.TabIndex = 12;
@@ -122,16 +119,16 @@
             // 
             // baslangicTarihi
             // 
-            this.baslangicTarihi.Location = new System.Drawing.Point(528, 234);
+            this.baslangicTarihi.Location = new System.Drawing.Point(528, 303);
             this.baslangicTarihi.Name = "baslangicTarihi";
-            this.baslangicTarihi.Size = new System.Drawing.Size(251, 22);
+            this.baslangicTarihi.Size = new System.Drawing.Size(375, 22);
             this.baslangicTarihi.TabIndex = 13;
             // 
             // bitisTarihi
             // 
-            this.bitisTarihi.Location = new System.Drawing.Point(528, 315);
+            this.bitisTarihi.Location = new System.Drawing.Point(528, 345);
             this.bitisTarihi.Name = "bitisTarihi";
-            this.bitisTarihi.Size = new System.Drawing.Size(251, 22);
+            this.bitisTarihi.Size = new System.Drawing.Size(375, 22);
             this.bitisTarihi.TabIndex = 14;
             // 
             // ProjectAddPage
