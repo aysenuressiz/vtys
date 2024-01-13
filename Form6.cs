@@ -55,9 +55,12 @@ namespace vtys
                 DataTable employeesTable = new DataTable();
                 adapter.Fill(employeesTable);
 
+                // isim ve soyisim sütunlarını birleştirip yeni bir sütun ekleyelim
+                employeesTable.Columns.Add("FullName", typeof(string), "isim + ' ' + soyisim");
+
                 // ComboBox'a çalışanları ekleme
                 calisanComboBox.DataSource = employeesTable;
-                calisanComboBox.DisplayMember = "isim, soyisim";
+                calisanComboBox.DisplayMember = "FullName";
                 calisanComboBox.ValueMember = "id";
             }
             catch (Exception ex)
