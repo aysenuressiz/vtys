@@ -49,41 +49,41 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(256, 106);
+            this.label1.Location = new System.Drawing.Point(256, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 24);
+            this.label1.Size = new System.Drawing.Size(199, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "PROJE SEÇİNİZ:";
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(256, 160);
+            this.label2.Location = new System.Drawing.Point(256, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 24);
+            this.label2.Size = new System.Drawing.Size(199, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "ÇALIŞAN SEÇİNİZ:";
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(256, 221);
+            this.label3.Location = new System.Drawing.Point(256, 142);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 24);
+            this.label3.Size = new System.Drawing.Size(199, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "ADAM GÜN DEĞERİ:";
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(256, 282);
+            this.label4.Location = new System.Drawing.Point(256, 190);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 24);
+            this.label4.Size = new System.Drawing.Size(199, 24);
             this.label4.TabIndex = 3;
             this.label4.Text = "GÖREV ADI:";
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(256, 336);
+            this.label5.Location = new System.Drawing.Point(256, 252);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 24);
+            this.label5.Size = new System.Drawing.Size(199, 24);
             this.label5.TabIndex = 4;
             this.label5.Text = "GÖREV TANIMI:";
             // 
@@ -105,7 +105,7 @@
             // 
             // görevEkle
             // 
-            this.görevEkle.Location = new System.Drawing.Point(527, 487);
+            this.görevEkle.Location = new System.Drawing.Point(642, 487);
             this.görevEkle.Name = "görevEkle";
             this.görevEkle.Size = new System.Drawing.Size(140, 56);
             this.görevEkle.TabIndex = 7;
@@ -115,7 +115,7 @@
             // 
             // geri
             // 
-            this.geri.Location = new System.Drawing.Point(346, 487);
+            this.geri.Location = new System.Drawing.Point(398, 487);
             this.geri.Name = "geri";
             this.geri.Size = new System.Drawing.Size(140, 56);
             this.geri.TabIndex = 8;
@@ -130,57 +130,58 @@
             // adamGunDegeri
             // 
             this.adamGunDegeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adamGunDegeri.Location = new System.Drawing.Point(510, 218);
+            this.adamGunDegeri.Location = new System.Drawing.Point(510, 132);
             this.adamGunDegeri.Name = "adamGunDegeri";
-            this.adamGunDegeri.Size = new System.Drawing.Size(257, 30);
+            this.adamGunDegeri.Size = new System.Drawing.Size(375, 30);
             this.adamGunDegeri.TabIndex = 9;
             // 
             // gorevAdi
             // 
             this.gorevAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gorevAdi.Location = new System.Drawing.Point(510, 276);
+            this.gorevAdi.Location = new System.Drawing.Point(510, 184);
             this.gorevAdi.Name = "gorevAdi";
-            this.gorevAdi.Size = new System.Drawing.Size(257, 30);
+            this.gorevAdi.Size = new System.Drawing.Size(375, 30);
             this.gorevAdi.TabIndex = 10;
             // 
             // gorevTanimi
             // 
             this.gorevTanimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gorevTanimi.Location = new System.Drawing.Point(510, 326);
+            this.gorevTanimi.Location = new System.Drawing.Point(510, 242);
+            this.gorevTanimi.Multiline = true;
             this.gorevTanimi.Name = "gorevTanimi";
-            this.gorevTanimi.Size = new System.Drawing.Size(257, 30);
+            this.gorevTanimi.Size = new System.Drawing.Size(375, 131);
             this.gorevTanimi.TabIndex = 11;
             // 
             // baslangicTarihi
             // 
             this.baslangicTarihi.Location = new System.Drawing.Point(510, 393);
             this.baslangicTarihi.Name = "baslangicTarihi";
-            this.baslangicTarihi.Size = new System.Drawing.Size(257, 22);
+            this.baslangicTarihi.Size = new System.Drawing.Size(375, 22);
             this.baslangicTarihi.TabIndex = 12;
             // 
             // bitisTarihi
             // 
             this.bitisTarihi.Location = new System.Drawing.Point(510, 437);
             this.bitisTarihi.Name = "bitisTarihi";
-            this.bitisTarihi.Size = new System.Drawing.Size(257, 22);
+            this.bitisTarihi.Size = new System.Drawing.Size(375, 22);
             this.bitisTarihi.TabIndex = 13;
             // 
             // projeComboBox
             // 
             this.projeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projeComboBox.FormattingEnabled = true;
-            this.projeComboBox.Location = new System.Drawing.Point(510, 97);
+            this.projeComboBox.Location = new System.Drawing.Point(510, 28);
             this.projeComboBox.Name = "projeComboBox";
-            this.projeComboBox.Size = new System.Drawing.Size(257, 33);
+            this.projeComboBox.Size = new System.Drawing.Size(375, 33);
             this.projeComboBox.TabIndex = 14;
             // 
             // calisanComboBox
             // 
             this.calisanComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calisanComboBox.FormattingEnabled = true;
-            this.calisanComboBox.Location = new System.Drawing.Point(510, 151);
+            this.calisanComboBox.Location = new System.Drawing.Point(510, 79);
             this.calisanComboBox.Name = "calisanComboBox";
-            this.calisanComboBox.Size = new System.Drawing.Size(257, 33);
+            this.calisanComboBox.Size = new System.Drawing.Size(375, 33);
             this.calisanComboBox.TabIndex = 15;
             // 
             // TaskAddPage
