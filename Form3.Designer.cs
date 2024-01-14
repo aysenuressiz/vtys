@@ -37,8 +37,6 @@
             this.projeEkle = new System.Windows.Forms.Button();
             this.gorevEkle = new System.Windows.Forms.Button();
             this.calisanEkle = new System.Windows.Forms.Button();
-            this.ayarlar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label6
@@ -136,31 +134,9 @@
             this.calisanEkle.Name = "calisanEkle";
             this.calisanEkle.Size = new System.Drawing.Size(269, 158);
             this.calisanEkle.TabIndex = 18;
-            this.calisanEkle.Text = "ÇALIŞAN EKLE";
+            this.calisanEkle.Text = "ÇALIŞANLAR";
             this.calisanEkle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.calisanEkle.UseVisualStyleBackColor = true;
-            // 
-            // ayarlar
-            // 
-            this.ayarlar.BackColor = System.Drawing.Color.Transparent;
-            this.ayarlar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ayarlar.BackgroundImage")));
-            this.ayarlar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ayarlar.Location = new System.Drawing.Point(897, 12);
-            this.ayarlar.Name = "ayarlar";
-            this.ayarlar.Size = new System.Drawing.Size(63, 61);
-            this.ayarlar.TabIndex = 19;
-            this.ayarlar.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.SteelBlue;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(893, 76);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 30);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Ayarlar";
             // 
             // HomePage
             // 
@@ -171,8 +147,6 @@
             this.ClientSize = new System.Drawing.Size(1170, 630);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.ayarlar);
             this.Controls.Add(this.calisanEkle);
             this.Controls.Add(this.gorevEkle);
             this.Controls.Add(this.projeEkle);
@@ -194,7 +168,5 @@
         private System.Windows.Forms.Button projeEkle;
         private System.Windows.Forms.Button gorevEkle;
         private System.Windows.Forms.Button calisanEkle;
-        private System.Windows.Forms.Button ayarlar;
-        private System.Windows.Forms.Label label4;
     }
 }

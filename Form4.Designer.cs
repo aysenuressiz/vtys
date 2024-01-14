@@ -43,7 +43,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.guncelle = new System.Windows.Forms.Button();
             this.geri = new System.Windows.Forms.Button();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(myAccountPage));
             this.SuspendLayout();
             // 
             // fotograf
