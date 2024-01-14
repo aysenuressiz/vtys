@@ -137,6 +137,7 @@
             this.calisanEkle.Text = "ÇALIŞANLAR";
             this.calisanEkle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.calisanEkle.UseVisualStyleBackColor = true;
+            this.calisanEkle.Click += new System.EventHandler(this.calisanEkle_Click);
             // 
             // HomePage
             // 

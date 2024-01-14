@@ -44,5 +44,12 @@ namespace vtys
             this.Hide(); // Form3'ü gizle
             form1.ShowDialog();
         }
+
+        private void calisanEkle_Click(object sender, EventArgs e)
+        {
+            employeesPage form1 = new employeesPage();
+            this.Hide(); // Form3'ü gizle
+            form1.ShowDialog();
+        }
     }
 }
