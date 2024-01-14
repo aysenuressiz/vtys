@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskAddPage));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,78 +50,112 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(256, 37);
+            this.label1.BackColor = System.Drawing.Color.SteelBlue;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(256, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 24);
+            this.label1.Padding = new System.Windows.Forms.Padding(3);
+            this.label1.Size = new System.Drawing.Size(199, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "PROJE SEÇİNİZ:";
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(256, 89);
+            this.label2.BackColor = System.Drawing.Color.SteelBlue;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(256, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 24);
+            this.label2.Padding = new System.Windows.Forms.Padding(2);
+            this.label2.Size = new System.Drawing.Size(211, 33);
             this.label2.TabIndex = 1;
             this.label2.Text = "ÇALIŞAN SEÇİNİZ:";
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(256, 142);
+            this.label3.BackColor = System.Drawing.Color.SteelBlue;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(256, 132);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(199, 24);
+            this.label3.Padding = new System.Windows.Forms.Padding(2);
+            this.label3.Size = new System.Drawing.Size(225, 30);
             this.label3.TabIndex = 2;
             this.label3.Text = "ADAM GÜN DEĞERİ:";
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(256, 190);
+            this.label4.BackColor = System.Drawing.Color.SteelBlue;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(256, 184);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(199, 24);
+            this.label4.Padding = new System.Windows.Forms.Padding(2);
+            this.label4.Size = new System.Drawing.Size(173, 30);
             this.label4.TabIndex = 3;
             this.label4.Text = "GÖREV ADI:";
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(256, 252);
+            this.label5.BackColor = System.Drawing.Color.SteelBlue;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(256, 245);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(199, 24);
+            this.label5.Padding = new System.Windows.Forms.Padding(2);
+            this.label5.Size = new System.Drawing.Size(199, 30);
             this.label5.TabIndex = 4;
             this.label5.Text = "GÖREV TANIMI:";
             // 
             // label6
             // 
+            this.label6.BackColor = System.Drawing.Color.SteelBlue;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(256, 393);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 24);
+            this.label6.Padding = new System.Windows.Forms.Padding(2);
+            this.label6.Size = new System.Drawing.Size(225, 32);
             this.label6.TabIndex = 5;
             this.label6.Text = "BAŞLANGIÇ TARİHİ:";
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(256, 442);
+            this.label7.BackColor = System.Drawing.Color.SteelBlue;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(256, 447);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(140, 24);
+            this.label7.Padding = new System.Windows.Forms.Padding(2);
+            this.label7.Size = new System.Drawing.Size(225, 32);
             this.label7.TabIndex = 6;
             this.label7.Text = "BİTİŞ TARİHİ:";
             // 
             // görevEkle
             // 
-            this.görevEkle.Location = new System.Drawing.Point(642, 487);
+            this.görevEkle.BackColor = System.Drawing.Color.SteelBlue;
+            this.görevEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.görevEkle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.görevEkle.Location = new System.Drawing.Point(723, 522);
             this.görevEkle.Name = "görevEkle";
-            this.görevEkle.Size = new System.Drawing.Size(140, 56);
+            this.görevEkle.Size = new System.Drawing.Size(140, 68);
             this.görevEkle.TabIndex = 7;
             this.görevEkle.Text = "GÖREV EKLE";
-            this.görevEkle.UseVisualStyleBackColor = true;
+            this.görevEkle.UseVisualStyleBackColor = false;
             this.görevEkle.Click += new System.EventHandler(this.görevEkle_Click);
             // 
             // geri
             // 
-            this.geri.Location = new System.Drawing.Point(398, 487);
+            this.geri.BackColor = System.Drawing.Color.SteelBlue;
+            this.geri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.geri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.geri.Location = new System.Drawing.Point(525, 522);
             this.geri.Name = "geri";
-            this.geri.Size = new System.Drawing.Size(140, 56);
+            this.geri.Size = new System.Drawing.Size(140, 68);
             this.geri.TabIndex = 8;
             this.geri.Text = "GERİ";
-            this.geri.UseVisualStyleBackColor = true;
+            this.geri.UseVisualStyleBackColor = false;
             this.geri.Click += new System.EventHandler(this.geri_Click);
             // 
             // kullanicilerTableAdapter1
@@ -154,14 +189,16 @@
             // 
             // baslangicTarihi
             // 
-            this.baslangicTarihi.Location = new System.Drawing.Point(510, 393);
+            this.baslangicTarihi.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.baslangicTarihi.Location = new System.Drawing.Point(510, 395);
             this.baslangicTarihi.Name = "baslangicTarihi";
             this.baslangicTarihi.Size = new System.Drawing.Size(375, 22);
             this.baslangicTarihi.TabIndex = 12;
             // 
             // bitisTarihi
             // 
-            this.bitisTarihi.Location = new System.Drawing.Point(510, 437);
+            this.bitisTarihi.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bitisTarihi.Location = new System.Drawing.Point(510, 449);
             this.bitisTarihi.Name = "bitisTarihi";
             this.bitisTarihi.Size = new System.Drawing.Size(375, 22);
             this.bitisTarihi.TabIndex = 13;
@@ -188,6 +225,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1170, 630);
             this.Controls.Add(this.calisanComboBox);
             this.Controls.Add(this.projeComboBox);
