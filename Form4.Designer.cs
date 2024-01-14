@@ -43,6 +43,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.guncelle = new System.Windows.Forms.Button();
             this.geri = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(myAccountPage));
             this.SuspendLayout();
             // 
             // fotograf
@@ -190,6 +191,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1170, 630);
             this.Controls.Add(this.geri);
             this.Controls.Add(this.guncelle);
