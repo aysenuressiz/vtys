@@ -15,6 +15,8 @@ namespace vtys
     public partial class LoginPage : Form
     {
         private bool sifreGizli = true;
+        // Giriş yapan kullanıcının ID'sini saklamak için global değişken
+        public static string GirisYapanKullaniciID;
         public LoginPage()
         {
             InitializeComponent();
@@ -62,6 +64,9 @@ namespace vtys
                     
                     komut.Parameters.AddWithValue("@e_mail", e_mail);
                     komut.Parameters.AddWithValue("@sifre", sifre);
+
+                    // Giriş yapan kullanıcının ID'sini al
+                    GirisYapanKullaniciID = komut.ExecuteScalar()?.ToString();
 
                     int kullaniciSayisi = (int)komut.ExecuteScalar();
 
