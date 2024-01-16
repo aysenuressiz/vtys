@@ -63,9 +63,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(386, 114);
+            this.label1.Location = new System.Drawing.Point(224, 114);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 35);
+            this.label1.Size = new System.Drawing.Size(265, 35);
             this.label1.TabIndex = 1;
             this.label1.Text = "İSİM:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -112,9 +112,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(345, 182);
+            this.label2.Location = new System.Drawing.Point(144, 182);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 35);
+            this.label2.Size = new System.Drawing.Size(345, 35);
             this.label2.TabIndex = 6;
             this.label2.Text = "SOYİSİM:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -124,9 +124,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(386, 254);
+            this.label3.Location = new System.Drawing.Point(125, 254);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 35);
+            this.label3.Size = new System.Drawing.Size(364, 35);
             this.label3.TabIndex = 7;
             this.label3.Text = "E-MAİL:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -136,9 +136,9 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(386, 330);
+            this.label4.Location = new System.Drawing.Point(179, 330);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 35);
+            this.label4.Size = new System.Drawing.Size(310, 35);
             this.label4.TabIndex = 8;
             this.label4.Text = "ŞİFRE:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -148,9 +148,9 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label5.Location = new System.Drawing.Point(289, 410);
+            this.label5.Location = new System.Drawing.Point(149, 410);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(200, 35);
+            this.label5.Size = new System.Drawing.Size(340, 35);
             this.label5.TabIndex = 9;
             this.label5.Text = "ŞİFRE TEKRAR:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -242,7 +242,7 @@
             this.label11.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label11.Location = new System.Drawing.Point(520, 385);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(252, 35);
+            this.label11.Size = new System.Drawing.Size(457, 35);
             this.label11.TabIndex = 17;
             this.label11.Text = "Lütfen şifrenizi tekrar giriniz.";
             // 

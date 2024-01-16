@@ -46,7 +46,7 @@ namespace vtys
             // 
             // girisButton
             // 
-            this.girisButton.BackColor = System.Drawing.Color.DimGray;
+            this.girisButton.BackColor = System.Drawing.Color.MidnightBlue;
             this.girisButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.girisButton.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.girisButton.Location = new System.Drawing.Point(404, 436);
@@ -137,15 +137,15 @@ namespace vtys
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(619, 410);
+            this.label5.Location = new System.Drawing.Point(610, 410);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 30);
+            this.label5.Size = new System.Drawing.Size(177, 30);
             this.label5.TabIndex = 8;
             this.label5.Text = "Hesabın yok mu?";
             // 
             // kayitbutton
             // 
-            this.kayitbutton.BackColor = System.Drawing.Color.DimGray;
+            this.kayitbutton.BackColor = System.Drawing.Color.MidnightBlue;
             this.kayitbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kayitbutton.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.kayitbutton.Location = new System.Drawing.Point(608, 436);
