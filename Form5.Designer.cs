@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProjectAddPage));
             this.projeAdi = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.projeAçiklamasi = new System.Windows.Forms.TextBox();
@@ -44,8 +45,9 @@
             // 
             // projeAdi
             // 
+            this.projeAdi.BackColor = System.Drawing.Color.WhiteSmoke;
             this.projeAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.projeAdi.Location = new System.Drawing.Point(533, 84);
+            this.projeAdi.Location = new System.Drawing.Point(487, 76);
             this.projeAdi.Name = "projeAdi";
             this.projeAdi.Size = new System.Drawing.Size(375, 30);
             this.projeAdi.TabIndex = 0;
@@ -58,8 +60,9 @@
             // 
             // projeAçiklamasi
             // 
+            this.projeAçiklamasi.BackColor = System.Drawing.Color.WhiteSmoke;
             this.projeAçiklamasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.projeAçiklamasi.Location = new System.Drawing.Point(533, 137);
+            this.projeAçiklamasi.Location = new System.Drawing.Point(487, 129);
             this.projeAçiklamasi.Multiline = true;
             this.projeAçiklamasi.Name = "projeAçiklamasi";
             this.projeAçiklamasi.Size = new System.Drawing.Size(375, 175);
@@ -67,11 +70,10 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.SteelBlue;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(318, 84);
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label1.Location = new System.Drawing.Point(272, 76);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(6, 2, 2, 2);
             this.label1.Size = new System.Drawing.Size(154, 30);
@@ -80,11 +82,10 @@
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.SteelBlue;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(315, 329);
+            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label2.Location = new System.Drawing.Point(269, 321);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(2);
             this.label2.Size = new System.Drawing.Size(157, 59);
@@ -93,11 +94,10 @@
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.SteelBlue;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(318, 417);
+            this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label3.Location = new System.Drawing.Point(272, 409);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(2);
             this.label3.Size = new System.Drawing.Size(157, 30);
@@ -106,11 +106,10 @@
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.SteelBlue;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(315, 147);
+            this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label4.Location = new System.Drawing.Point(269, 139);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(2);
             this.label4.Size = new System.Drawing.Size(157, 60);
@@ -119,10 +118,10 @@
             // 
             // projeEkle
             // 
-            this.projeEkle.BackColor = System.Drawing.Color.SteelBlue;
+            this.projeEkle.BackColor = System.Drawing.Color.MidnightBlue;
             this.projeEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.projeEkle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.projeEkle.Location = new System.Drawing.Point(734, 486);
+            this.projeEkle.Location = new System.Drawing.Point(688, 478);
             this.projeEkle.Name = "projeEkle";
             this.projeEkle.Size = new System.Drawing.Size(163, 57);
             this.projeEkle.TabIndex = 11;
@@ -132,10 +131,10 @@
             // 
             // geri
             // 
-            this.geri.BackColor = System.Drawing.Color.SteelBlue;
+            this.geri.BackColor = System.Drawing.Color.MidnightBlue;
             this.geri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.geri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.geri.Location = new System.Drawing.Point(560, 486);
+            this.geri.Location = new System.Drawing.Point(514, 478);
             this.geri.Name = "geri";
             this.geri.Size = new System.Drawing.Size(128, 57);
             this.geri.TabIndex = 12;
@@ -146,7 +145,7 @@
             // baslangicTarihi
             // 
             this.baslangicTarihi.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.baslangicTarihi.Location = new System.Drawing.Point(533, 344);
+            this.baslangicTarihi.Location = new System.Drawing.Point(487, 336);
             this.baslangicTarihi.Name = "baslangicTarihi";
             this.baslangicTarihi.Size = new System.Drawing.Size(375, 22);
             this.baslangicTarihi.TabIndex = 13;
@@ -154,7 +153,7 @@
             // bitisTarihi
             // 
             this.bitisTarihi.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bitisTarihi.Location = new System.Drawing.Point(533, 403);
+            this.bitisTarihi.Location = new System.Drawing.Point(487, 395);
             this.bitisTarihi.Name = "bitisTarihi";
             this.bitisTarihi.Size = new System.Drawing.Size(375, 22);
             this.bitisTarihi.TabIndex = 14;
@@ -163,6 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1170, 630);
             this.Controls.Add(this.bitisTarihi);

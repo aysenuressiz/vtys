@@ -272,7 +272,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
-            this.ForeColor = System.Drawing.Color.SteelBlue;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "SignUpPage";
             this.Text = "SIGN UP PAGE";
             this.ResumeLayout(false);

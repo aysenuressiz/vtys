@@ -126,7 +126,7 @@
             this.calisanEkle.Name = "calisanEkle";
             this.calisanEkle.Size = new System.Drawing.Size(190, 190);
             this.calisanEkle.TabIndex = 18;
-            this.calisanEkle.Text = "Çalışan Ekle";
+            this.calisanEkle.Text = "Çalışanlar";
             this.calisanEkle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.calisanEkle.UseVisualStyleBackColor = true;
             this.calisanEkle.Click += new System.EventHandler(this.calisanEkle_Click);
