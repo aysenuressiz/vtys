@@ -36,15 +36,16 @@
             this.projeEkle = new System.Windows.Forms.Button();
             this.gorevEkle = new System.Windows.Forms.Button();
             this.calisanEkle = new System.Windows.Forms.Button();
+            this.projeListele = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // hesabım
             // 
             this.hesabım.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("hesabım.BackgroundImage")));
             this.hesabım.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.hesabım.Location = new System.Drawing.Point(956, 12);
+            this.hesabım.Location = new System.Drawing.Point(981, 12);
             this.hesabım.Name = "hesabım";
-            this.hesabım.Size = new System.Drawing.Size(63, 61);
+            this.hesabım.Size = new System.Drawing.Size(61, 61);
             this.hesabım.TabIndex = 12;
             this.hesabım.UseVisualStyleBackColor = true;
             this.hesabım.Click += new System.EventHandler(this.hesabım_Click);
@@ -56,17 +57,17 @@
             this.cikis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.cikis.Location = new System.Drawing.Point(1067, 12);
             this.cikis.Name = "cikis";
-            this.cikis.Size = new System.Drawing.Size(63, 61);
+            this.cikis.Size = new System.Drawing.Size(61, 61);
             this.cikis.TabIndex = 13;
             this.cikis.UseVisualStyleBackColor = false;
             this.cikis.Click += new System.EventHandler(this.cikis_Click);
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.Gainsboro;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(944, 76);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(974, 76);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(3);
             this.label2.Size = new System.Drawing.Size(89, 30);
@@ -75,9 +76,9 @@
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.Gainsboro;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(1067, 76);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(3);
@@ -89,12 +90,13 @@
             // 
             this.projeEkle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("projeEkle.BackgroundImage")));
             this.projeEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.projeEkle.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.projeEkle.Location = new System.Drawing.Point(200, 300);
+            this.projeEkle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.projeEkle.ForeColor = System.Drawing.Color.DimGray;
+            this.projeEkle.Location = new System.Drawing.Point(230, 76);
             this.projeEkle.Name = "projeEkle";
-            this.projeEkle.Size = new System.Drawing.Size(223, 158);
+            this.projeEkle.Size = new System.Drawing.Size(190, 190);
             this.projeEkle.TabIndex = 16;
-            this.projeEkle.Text = "PROJE EKLE";
+            this.projeEkle.Text = "Proje Ekle";
             this.projeEkle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.projeEkle.UseVisualStyleBackColor = true;
             this.projeEkle.Click += new System.EventHandler(this.projeEkle_Click);
@@ -103,12 +105,13 @@
             // 
             this.gorevEkle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gorevEkle.BackgroundImage")));
             this.gorevEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gorevEkle.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gorevEkle.Location = new System.Drawing.Point(500, 300);
+            this.gorevEkle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gorevEkle.ForeColor = System.Drawing.Color.DimGray;
+            this.gorevEkle.Location = new System.Drawing.Point(529, 353);
             this.gorevEkle.Name = "gorevEkle";
-            this.gorevEkle.Size = new System.Drawing.Size(223, 158);
+            this.gorevEkle.Size = new System.Drawing.Size(190, 190);
             this.gorevEkle.TabIndex = 17;
-            this.gorevEkle.Text = "GÖREV EKLE";
+            this.gorevEkle.Text = "Görev Ekle";
             this.gorevEkle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.gorevEkle.UseVisualStyleBackColor = true;
             this.gorevEkle.Click += new System.EventHandler(this.gorevEkle_Click);
@@ -117,15 +120,30 @@
             // 
             this.calisanEkle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("calisanEkle.BackgroundImage")));
             this.calisanEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.calisanEkle.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calisanEkle.Location = new System.Drawing.Point(800, 300);
+            this.calisanEkle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calisanEkle.ForeColor = System.Drawing.Color.DimGray;
+            this.calisanEkle.Location = new System.Drawing.Point(230, 352);
             this.calisanEkle.Name = "calisanEkle";
-            this.calisanEkle.Size = new System.Drawing.Size(223, 157);
+            this.calisanEkle.Size = new System.Drawing.Size(190, 190);
             this.calisanEkle.TabIndex = 18;
-            this.calisanEkle.Text = "ÇALIŞANLAR";
+            this.calisanEkle.Text = "Çalışan Ekle";
             this.calisanEkle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.calisanEkle.UseVisualStyleBackColor = true;
             this.calisanEkle.Click += new System.EventHandler(this.calisanEkle_Click);
+            // 
+            // projeListele
+            // 
+            this.projeListele.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("projeListele.BackgroundImage")));
+            this.projeListele.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.projeListele.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.projeListele.ForeColor = System.Drawing.Color.DimGray;
+            this.projeListele.Location = new System.Drawing.Point(529, 76);
+            this.projeListele.Name = "projeListele";
+            this.projeListele.Size = new System.Drawing.Size(190, 190);
+            this.projeListele.TabIndex = 19;
+            this.projeListele.Text = "Proje Listele";
+            this.projeListele.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.projeListele.UseVisualStyleBackColor = true;
             // 
             // HomePage
             // 
@@ -134,13 +152,14 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1170, 630);
+            this.Controls.Add(this.projeListele);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.calisanEkle);
             this.Controls.Add(this.gorevEkle);
-            this.Controls.Add(this.projeEkle);
             this.Controls.Add(this.cikis);
             this.Controls.Add(this.hesabım);
+            this.Controls.Add(this.projeEkle);
             this.Name = "HomePage";
             this.Text = "HOME PAGE";
             this.ResumeLayout(false);
@@ -155,5 +174,6 @@
         private System.Windows.Forms.Button projeEkle;
         private System.Windows.Forms.Button gorevEkle;
         private System.Windows.Forms.Button calisanEkle;
+        private System.Windows.Forms.Button projeListele;
     }
 }
