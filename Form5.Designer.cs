@@ -73,10 +73,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(272, 76);
+            this.label1.Location = new System.Drawing.Point(286, 79);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(6, 2, 2, 2);
-            this.label1.Size = new System.Drawing.Size(154, 30);
+            this.label1.Size = new System.Drawing.Size(157, 30);
             this.label1.TabIndex = 6;
             this.label1.Text = "PROJE ADI:";
             // 
@@ -85,7 +85,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(269, 321);
+            this.label2.Location = new System.Drawing.Point(286, 334);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(2);
             this.label2.Size = new System.Drawing.Size(157, 59);
@@ -97,7 +97,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(272, 409);
+            this.label3.Location = new System.Drawing.Point(286, 409);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(2);
             this.label3.Size = new System.Drawing.Size(157, 30);
@@ -109,7 +109,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(269, 139);
+            this.label4.Location = new System.Drawing.Point(286, 132);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(2);
             this.label4.Size = new System.Drawing.Size(157, 60);
@@ -153,7 +153,7 @@
             // bitisTarihi
             // 
             this.bitisTarihi.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bitisTarihi.Location = new System.Drawing.Point(487, 395);
+            this.bitisTarihi.Location = new System.Drawing.Point(487, 411);
             this.bitisTarihi.Name = "bitisTarihi";
             this.bitisTarihi.Size = new System.Drawing.Size(375, 22);
             this.bitisTarihi.TabIndex = 14;

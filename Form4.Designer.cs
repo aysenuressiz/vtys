@@ -45,7 +45,7 @@
             // fotograf
             // 
             this.fotograf.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fotograf.BackgroundImage")));
-            this.fotograf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.fotograf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.fotograf.Location = new System.Drawing.Point(212, 136);
             this.fotograf.Name = "fotograf";
             this.fotograf.Size = new System.Drawing.Size(147, 148);
@@ -56,7 +56,8 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label1.Location = new System.Drawing.Point(427, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 35);
@@ -67,7 +68,8 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label2.Location = new System.Drawing.Point(386, 168);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 35);
@@ -78,7 +80,8 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label3.Location = new System.Drawing.Point(427, 231);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 35);
@@ -89,7 +92,8 @@
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label4.Location = new System.Drawing.Point(427, 292);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 35);
@@ -100,27 +104,28 @@
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(427, 354);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label5.Location = new System.Drawing.Point(409, 354);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 35);
+            this.label5.Size = new System.Drawing.Size(121, 35);
             this.label5.TabIndex = 18;
             this.label5.Text = "TELEFON:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // adBox
             // 
-            this.adBox.BackColor = System.Drawing.Color.AliceBlue;
-            this.adBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adBox.Location = new System.Drawing.Point(563, 108);
+            this.adBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.adBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.adBox.Location = new System.Drawing.Point(563, 112);
             this.adBox.Name = "adBox";
             this.adBox.Size = new System.Drawing.Size(247, 30);
             this.adBox.TabIndex = 19;
             // 
             // soyadBox
             // 
-            this.soyadBox.BackColor = System.Drawing.Color.AliceBlue;
-            this.soyadBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soyadBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.soyadBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.soyadBox.Location = new System.Drawing.Point(563, 168);
             this.soyadBox.Name = "soyadBox";
             this.soyadBox.Size = new System.Drawing.Size(247, 30);
@@ -128,8 +133,8 @@
             // 
             // emailBox
             // 
-            this.emailBox.BackColor = System.Drawing.Color.AliceBlue;
-            this.emailBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.emailBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.emailBox.Location = new System.Drawing.Point(563, 231);
             this.emailBox.Name = "emailBox";
             this.emailBox.Size = new System.Drawing.Size(247, 30);
@@ -137,8 +142,8 @@
             // 
             // sifreBox
             // 
-            this.sifreBox.BackColor = System.Drawing.Color.AliceBlue;
-            this.sifreBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sifreBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.sifreBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.sifreBox.Location = new System.Drawing.Point(563, 292);
             this.sifreBox.Name = "sifreBox";
             this.sifreBox.Size = new System.Drawing.Size(247, 30);
@@ -146,8 +151,8 @@
             // 
             // telefonBox
             // 
-            this.telefonBox.BackColor = System.Drawing.Color.AliceBlue;
-            this.telefonBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.telefonBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.telefonBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.telefonBox.Location = new System.Drawing.Point(563, 354);
             this.telefonBox.Name = "telefonBox";
             this.telefonBox.Size = new System.Drawing.Size(247, 30);
@@ -155,49 +160,40 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(222, 299);
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(217, 304);
+            this.button1.Location = new System.Drawing.Point(212, 303);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 23);
-            this.button1.Size = new System.Drawing.Size(142, 44);
+            this.button1.Size = new System.Drawing.Size(147, 49);
             this.button1.TabIndex = 24;
             this.button1.Text = "DEĞİŞTİR";
-            this.button1.UseVisualStyleBackColor = true;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // guncelle
             // 
-            this.guncelle.Location = new System.Drawing.Point(700, 425);
-            this.guncelle.BackColor = System.Drawing.Color.SteelBlue;
+            this.guncelle.BackColor = System.Drawing.Color.MidnightBlue;
             this.guncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guncelle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guncelle.Location = new System.Drawing.Point(681, 440);
+            this.guncelle.Location = new System.Drawing.Point(668, 439);
             this.guncelle.Name = "guncelle";
-            this.guncelle.Size = new System.Drawing.Size(128, 46);
-            this.guncelle.Size = new System.Drawing.Size(151, 44);
+            this.guncelle.Size = new System.Drawing.Size(161, 60);
             this.guncelle.TabIndex = 25;
             this.guncelle.Text = "GÜNCELLE";
-            this.guncelle.UseVisualStyleBackColor = true;
             this.guncelle.UseVisualStyleBackColor = false;
             this.guncelle.Click += new System.EventHandler(this.guncelle_Click);
             // 
             // geri
             // 
-            this.geri.Location = new System.Drawing.Point(503, 425);
-            this.geri.BackColor = System.Drawing.Color.SteelBlue;
+            this.geri.BackColor = System.Drawing.Color.MidnightBlue;
             this.geri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.geri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.geri.Location = new System.Drawing.Point(475, 440);
+            this.geri.Location = new System.Drawing.Point(462, 439);
             this.geri.Name = "geri";
-            this.geri.Size = new System.Drawing.Size(128, 46);
-            this.geri.Size = new System.Drawing.Size(151, 44);
+            this.geri.Size = new System.Drawing.Size(161, 60);
             this.geri.TabIndex = 26;
             this.geri.Text = "GERİ";
-            this.geri.UseVisualStyleBackColor = true;
             this.geri.UseVisualStyleBackColor = false;
             this.geri.Click += new System.EventHandler(this.geri_Click);
             // 
@@ -226,6 +222,7 @@
             this.Text = "MY ACCOUNT PAGE";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
         #endregion
         private System.Windows.Forms.Button fotograf;
