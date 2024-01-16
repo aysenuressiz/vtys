@@ -35,7 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.projeEkle = new System.Windows.Forms.Button();
             this.gorevEkle = new System.Windows.Forms.Button();
-            this.calisanEkle = new System.Windows.Forms.Button();
+            this.calisanlar = new System.Windows.Forms.Button();
             this.projeListele = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -116,20 +116,20 @@
             this.gorevEkle.UseVisualStyleBackColor = true;
             this.gorevEkle.Click += new System.EventHandler(this.gorevEkle_Click);
             // 
-            // calisanEkle
+            // calisanlar
             // 
-            this.calisanEkle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("calisanEkle.BackgroundImage")));
-            this.calisanEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.calisanEkle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calisanEkle.ForeColor = System.Drawing.Color.DimGray;
-            this.calisanEkle.Location = new System.Drawing.Point(230, 352);
-            this.calisanEkle.Name = "calisanEkle";
-            this.calisanEkle.Size = new System.Drawing.Size(190, 190);
-            this.calisanEkle.TabIndex = 18;
-            this.calisanEkle.Text = "Çalışanlar";
-            this.calisanEkle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.calisanEkle.UseVisualStyleBackColor = true;
-            this.calisanEkle.Click += new System.EventHandler(this.calisanEkle_Click);
+            this.calisanlar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("calisanlar.BackgroundImage")));
+            this.calisanlar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.calisanlar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calisanlar.ForeColor = System.Drawing.Color.DimGray;
+            this.calisanlar.Location = new System.Drawing.Point(230, 352);
+            this.calisanlar.Name = "calisanlar";
+            this.calisanlar.Size = new System.Drawing.Size(190, 190);
+            this.calisanlar.TabIndex = 18;
+            this.calisanlar.Text = "Çalışanlar";
+            this.calisanlar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.calisanlar.UseVisualStyleBackColor = true;
+            this.calisanlar.Click += new System.EventHandler(this.calisanlar_Click);
             // 
             // projeListele
             // 
@@ -155,7 +155,7 @@
             this.Controls.Add(this.projeListele);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.calisanEkle);
+            this.Controls.Add(this.calisanlar);
             this.Controls.Add(this.gorevEkle);
             this.Controls.Add(this.cikis);
             this.Controls.Add(this.hesabım);
@@ -173,7 +173,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button projeEkle;
         private System.Windows.Forms.Button gorevEkle;
-        private System.Windows.Forms.Button calisanEkle;
+        private System.Windows.Forms.Button calisanlar;
         private System.Windows.Forms.Button projeListele;
     }
 }

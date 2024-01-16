@@ -45,7 +45,7 @@ namespace vtys
             form1.ShowDialog();
         }
 
-        private void calisanEkle_Click(object sender, EventArgs e)
+        private void calisanlar_Click(object sender, EventArgs e)
         {
             employeesPage form1 = new employeesPage();
             this.Hide(); // Form3'ü gizle
