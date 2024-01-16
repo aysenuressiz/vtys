@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProjectAddPage));
             this.projeAdi = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.projeAçiklamasi = new System.Windows.Forms.TextBox();
@@ -143,7 +142,7 @@
             // baslangicTarihi
             // 
             this.baslangicTarihi.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.baslangicTarihi.Location = new System.Drawing.Point(533, 331);
+            this.baslangicTarihi.Location = new System.Drawing.Point(533, 344);
             this.baslangicTarihi.Name = "baslangicTarihi";
             this.baslangicTarihi.Size = new System.Drawing.Size(375, 22);
             this.baslangicTarihi.TabIndex = 13;
@@ -151,7 +150,7 @@
             // bitisTarihi
             // 
             this.bitisTarihi.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bitisTarihi.Location = new System.Drawing.Point(533, 403);
+            this.bitisTarihi.Location = new System.Drawing.Point(533, 405);
             this.bitisTarihi.Name = "bitisTarihi";
             this.bitisTarihi.Size = new System.Drawing.Size(375, 22);
             this.bitisTarihi.TabIndex = 14;
@@ -160,7 +159,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1170, 630);
             this.Controls.Add(this.bitisTarihi);
