@@ -46,7 +46,7 @@ namespace vtys
             // 
             // girisButton
             // 
-            this.girisButton.BackColor = System.Drawing.Color.MidnightBlue;
+            this.girisButton.BackColor = System.Drawing.Color.DimGray;
             this.girisButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.girisButton.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.girisButton.Location = new System.Drawing.Point(404, 436);
@@ -145,7 +145,7 @@ namespace vtys
             // 
             // kayitbutton
             // 
-            this.kayitbutton.BackColor = System.Drawing.Color.MidnightBlue;
+            this.kayitbutton.BackColor = System.Drawing.Color.DimGray;
             this.kayitbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kayitbutton.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.kayitbutton.Location = new System.Drawing.Point(608, 436);
@@ -189,6 +189,7 @@ namespace vtys
             this.Controls.Add(this.label2);
             this.Name = "LoginPage";
             this.Text = "LOGIN PAGE";
+            this.Load += new System.EventHandler(this.LoginPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
