@@ -6,7 +6,6 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -19,9 +18,7 @@
             }
             base.Dispose(disposing);
         }
-
         #region Windows Form Designer generated code
-
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -29,6 +26,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(myAccountPage));
+            this.fotograf = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.adBox = new System.Windows.Forms.TextBox();
+            this.soyadBox = new System.Windows.Forms.TextBox();
+            this.emailBox = new System.Windows.Forms.TextBox();
+            this.sifreBox = new System.Windows.Forms.TextBox();
+            this.telefonBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.guncelle = new System.Windows.Forms.Button();
+            this.geri = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // fotograf
@@ -144,40 +155,49 @@
             // 
             // button1
             // 
+            this.button1.Location = new System.Drawing.Point(222, 299);
             this.button1.BackColor = System.Drawing.Color.SteelBlue;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(217, 304);
             this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 23);
             this.button1.Size = new System.Drawing.Size(142, 44);
             this.button1.TabIndex = 24;
             this.button1.Text = "DEĞİŞTİR";
+            this.button1.UseVisualStyleBackColor = true;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // guncelle
             // 
+            this.guncelle.Location = new System.Drawing.Point(700, 425);
             this.guncelle.BackColor = System.Drawing.Color.SteelBlue;
             this.guncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guncelle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guncelle.Location = new System.Drawing.Point(681, 440);
             this.guncelle.Name = "guncelle";
+            this.guncelle.Size = new System.Drawing.Size(128, 46);
             this.guncelle.Size = new System.Drawing.Size(151, 44);
             this.guncelle.TabIndex = 25;
             this.guncelle.Text = "GÜNCELLE";
+            this.guncelle.UseVisualStyleBackColor = true;
             this.guncelle.UseVisualStyleBackColor = false;
             this.guncelle.Click += new System.EventHandler(this.guncelle_Click);
             // 
             // geri
             // 
+            this.geri.Location = new System.Drawing.Point(503, 425);
             this.geri.BackColor = System.Drawing.Color.SteelBlue;
             this.geri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.geri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.geri.Location = new System.Drawing.Point(475, 440);
             this.geri.Name = "geri";
+            this.geri.Size = new System.Drawing.Size(128, 46);
             this.geri.Size = new System.Drawing.Size(151, 44);
             this.geri.TabIndex = 26;
             this.geri.Text = "GERİ";
+            this.geri.UseVisualStyleBackColor = true;
             this.geri.UseVisualStyleBackColor = false;
             this.geri.Click += new System.EventHandler(this.geri_Click);
             // 
@@ -185,6 +205,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1170, 630);
             this.Controls.Add(this.geri);
@@ -205,11 +226,8 @@
             this.Text = "MY ACCOUNT PAGE";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
-
         #endregion
-
         private System.Windows.Forms.Button fotograf;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
