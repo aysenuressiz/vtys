@@ -50,10 +50,9 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.SteelBlue;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label1.Location = new System.Drawing.Point(256, 28);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(3);
@@ -63,10 +62,9 @@
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.SteelBlue;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label2.Location = new System.Drawing.Point(256, 79);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(2);
@@ -76,10 +74,9 @@
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.SteelBlue;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label3.Location = new System.Drawing.Point(256, 132);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(2);
@@ -89,10 +86,9 @@
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.SteelBlue;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label4.Location = new System.Drawing.Point(256, 184);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(2);
@@ -102,10 +98,9 @@
             // 
             // label5
             // 
-            this.label5.BackColor = System.Drawing.Color.SteelBlue;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label5.Location = new System.Drawing.Point(256, 245);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(2);
@@ -115,10 +110,9 @@
             // 
             // label6
             // 
-            this.label6.BackColor = System.Drawing.Color.SteelBlue;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label6.Location = new System.Drawing.Point(256, 393);
             this.label6.Name = "label6";
             this.label6.Padding = new System.Windows.Forms.Padding(2);
@@ -128,10 +122,9 @@
             // 
             // label7
             // 
-            this.label7.BackColor = System.Drawing.Color.SteelBlue;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label7.Location = new System.Drawing.Point(256, 447);
             this.label7.Name = "label7";
             this.label7.Padding = new System.Windows.Forms.Padding(2);
@@ -141,7 +134,7 @@
             // 
             // görevEkle
             // 
-            this.görevEkle.BackColor = System.Drawing.Color.SteelBlue;
+            this.görevEkle.BackColor = System.Drawing.Color.MidnightBlue;
             this.görevEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.görevEkle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.görevEkle.Location = new System.Drawing.Point(723, 522);
@@ -154,7 +147,7 @@
             // 
             // geri
             // 
-            this.geri.BackColor = System.Drawing.Color.SteelBlue;
+            this.geri.BackColor = System.Drawing.Color.MidnightBlue;
             this.geri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.geri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.geri.Location = new System.Drawing.Point(525, 522);
@@ -171,6 +164,7 @@
             // 
             // adamGunDegeri
             // 
+            this.adamGunDegeri.BackColor = System.Drawing.Color.WhiteSmoke;
             this.adamGunDegeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adamGunDegeri.Location = new System.Drawing.Point(510, 132);
             this.adamGunDegeri.Name = "adamGunDegeri";
@@ -179,6 +173,7 @@
             // 
             // gorevAdi
             // 
+            this.gorevAdi.BackColor = System.Drawing.Color.WhiteSmoke;
             this.gorevAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gorevAdi.Location = new System.Drawing.Point(510, 184);
             this.gorevAdi.Name = "gorevAdi";
@@ -187,6 +182,7 @@
             // 
             // gorevTanimi
             // 
+            this.gorevTanimi.BackColor = System.Drawing.Color.WhiteSmoke;
             this.gorevTanimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gorevTanimi.Location = new System.Drawing.Point(510, 242);
             this.gorevTanimi.Multiline = true;
@@ -212,6 +208,7 @@
             // 
             // projeComboBox
             // 
+            this.projeComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.projeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projeComboBox.FormattingEnabled = true;
             this.projeComboBox.Location = new System.Drawing.Point(510, 28);
@@ -221,6 +218,7 @@
             // 
             // calisanComboBox
             // 
+            this.calisanComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.calisanComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calisanComboBox.FormattingEnabled = true;
             this.calisanComboBox.Location = new System.Drawing.Point(510, 79);
