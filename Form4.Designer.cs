@@ -29,20 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(myAccountPage));
-            this.fotograf = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.adBox = new System.Windows.Forms.TextBox();
-            this.soyadBox = new System.Windows.Forms.TextBox();
-            this.emailBox = new System.Windows.Forms.TextBox();
-            this.sifreBox = new System.Windows.Forms.TextBox();
-            this.telefonBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.guncelle = new System.Windows.Forms.Button();
-            this.geri = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // fotograf
