@@ -111,6 +111,11 @@ namespace vtys
             this.Hide();
             form2.Show();
         }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

@@ -137,7 +137,7 @@
             this.projeListele.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.projeListele.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projeListele.ForeColor = System.Drawing.Color.DimGray;
-            this.projeListele.Location = new System.Drawing.Point(529, 76);
+            this.projeListele.Location = new System.Drawing.Point(550, 76);
             this.projeListele.Name = "projeListele";
             this.projeListele.Size = new System.Drawing.Size(190, 190);
             this.projeListele.TabIndex = 19;

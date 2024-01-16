@@ -44,7 +44,6 @@ namespace vtys
                         adapter.Fill(userData);
 
                         // DataGridView'e kullanıcıların listesini bind et
-                        dataGridView1.DataSource = userData;
                     }
 
                     // Kullanıcının projelerini ve görevlerini çeken SQL sorgusu
@@ -63,8 +62,6 @@ namespace vtys
                         DataTable projectData = new DataTable();
                         adapter.Fill(projectData);
 
-                        // DataGridView'e projeleri ve görevleri bind et
-                        dataGridView2.DataSource = projectData;
                     }
                 }
             }
