@@ -24,10 +24,6 @@ namespace vtys
         }
         static string constring = "Data Source=UNIQUEA-PC\\SQLEXPRESS;Initial Catalog=ProjectTracker;Integrated Security=True";
         SqlConnection connect = new SqlConnection(constring);
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void girisButton_Click(object sender, EventArgs e){
             try{

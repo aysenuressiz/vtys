@@ -69,6 +69,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.SteelBlue;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(318, 84);
@@ -81,21 +82,23 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.SteelBlue;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(315, 329);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(2);
-            this.label2.Size = new System.Drawing.Size(157, 54);
+            this.label2.Size = new System.Drawing.Size(157, 59);
             this.label2.TabIndex = 7;
             this.label2.Text = "BAŞLANGIÇ TARİHİ:";
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.SteelBlue;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(315, 403);
+            this.label3.Location = new System.Drawing.Point(318, 417);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(2);
             this.label3.Size = new System.Drawing.Size(157, 30);
@@ -105,6 +108,7 @@
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.SteelBlue;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(315, 147);
@@ -151,7 +155,7 @@
             // bitisTarihi
             // 
             this.bitisTarihi.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bitisTarihi.Location = new System.Drawing.Point(533, 403);
+            this.bitisTarihi.Location = new System.Drawing.Point(533, 425);
             this.bitisTarihi.Name = "bitisTarihi";
             this.bitisTarihi.Size = new System.Drawing.Size(375, 22);
             this.bitisTarihi.TabIndex = 14;
