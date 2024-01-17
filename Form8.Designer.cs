@@ -65,11 +65,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(150, 118);
+            this.dataGridView1.Location = new System.Drawing.Point(170, 115);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(968, 437);
+            this.dataGridView1.Size = new System.Drawing.Size(960, 437);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -79,9 +79,9 @@
             this.geri.BackColor = System.Drawing.Color.MidnightBlue;
             this.geri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.geri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.geri.Location = new System.Drawing.Point(205, 565);
+            this.geri.Location = new System.Drawing.Point(210, 565);
             this.geri.Name = "geri";
-            this.geri.Size = new System.Drawing.Size(140, 68);
+            this.geri.Size = new System.Drawing.Size(160, 65);
             this.geri.TabIndex = 13;
             this.geri.Text = "GERİ";
             this.geri.UseVisualStyleBackColor = false;
@@ -93,9 +93,9 @@
             this.ekle.BackColor = System.Drawing.Color.MidnightBlue;
             this.ekle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ekle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ekle.Location = new System.Drawing.Point(446, 565);
+            this.ekle.Location = new System.Drawing.Point(450, 565);
             this.ekle.Name = "ekle";
-            this.ekle.Size = new System.Drawing.Size(140, 68);
+            this.ekle.Size = new System.Drawing.Size(160, 65);
             this.ekle.TabIndex = 32;
             this.ekle.Text = "EKLE";
             this.ekle.UseVisualStyleBackColor = false;
@@ -107,9 +107,9 @@
             this.sil.BackColor = System.Drawing.Color.MidnightBlue;
             this.sil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.sil.Location = new System.Drawing.Point(691, 565);
+            this.sil.Location = new System.Drawing.Point(690, 565);
             this.sil.Name = "sil";
-            this.sil.Size = new System.Drawing.Size(140, 68);
+            this.sil.Size = new System.Drawing.Size(160, 65);
             this.sil.TabIndex = 33;
             this.sil.Text = "SİL";
             this.sil.UseVisualStyleBackColor = false;
@@ -121,9 +121,9 @@
             this.guncelle.BackColor = System.Drawing.Color.MidnightBlue;
             this.guncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guncelle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guncelle.Location = new System.Drawing.Point(935, 565);
+            this.guncelle.Location = new System.Drawing.Point(930, 565);
             this.guncelle.Name = "guncelle";
-            this.guncelle.Size = new System.Drawing.Size(146, 68);
+            this.guncelle.Size = new System.Drawing.Size(160, 65);
             this.guncelle.TabIndex = 34;
             this.guncelle.Text = "GÜNCELLE";
             this.guncelle.UseVisualStyleBackColor = false;

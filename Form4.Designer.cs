@@ -192,7 +192,7 @@
             this.guncelle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guncelle.Location = new System.Drawing.Point(783, 508);
             this.guncelle.Name = "guncelle";
-            this.guncelle.Size = new System.Drawing.Size(160, 68);
+            this.guncelle.Size = new System.Drawing.Size(160, 65);
             this.guncelle.TabIndex = 25;
             this.guncelle.Text = "GÜNCELLE";
             this.guncelle.UseVisualStyleBackColor = false;
@@ -206,7 +206,7 @@
             this.geri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.geri.Location = new System.Drawing.Point(598, 508);
             this.geri.Name = "geri";
-            this.geri.Size = new System.Drawing.Size(140, 68);
+            this.geri.Size = new System.Drawing.Size(160, 65);
             this.geri.TabIndex = 26;
             this.geri.Text = "GERİ";
             this.geri.UseVisualStyleBackColor = false;

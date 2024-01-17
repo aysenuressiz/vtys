@@ -52,7 +52,7 @@ namespace vtys
             this.girisButton.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.girisButton.Location = new System.Drawing.Point(469, 439);
             this.girisButton.Name = "girisButton";
-            this.girisButton.Size = new System.Drawing.Size(140, 68);
+            this.girisButton.Size = new System.Drawing.Size(160, 65);
             this.girisButton.TabIndex = 0;
             this.girisButton.Text = "GİRİŞ YAP";
             this.girisButton.UseVisualStyleBackColor = false;
@@ -145,9 +145,9 @@ namespace vtys
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(680, 414);
+            this.label5.Location = new System.Drawing.Point(687, 414);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 30);
+            this.label5.Size = new System.Drawing.Size(154, 30);
             this.label5.TabIndex = 8;
             this.label5.Text = "Hesabın yok mu?";
             // 
@@ -159,7 +159,7 @@ namespace vtys
             this.kayitbutton.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.kayitbutton.Location = new System.Drawing.Point(676, 439);
             this.kayitbutton.Name = "kayitbutton";
-            this.kayitbutton.Size = new System.Drawing.Size(140, 68);
+            this.kayitbutton.Size = new System.Drawing.Size(160, 65);
             this.kayitbutton.TabIndex = 9;
             this.kayitbutton.Text = "KAYIT OL";
             this.kayitbutton.UseVisualStyleBackColor = false;

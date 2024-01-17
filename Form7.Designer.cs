@@ -57,7 +57,7 @@
             this.geri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.geri.Location = new System.Drawing.Point(594, 566);
             this.geri.Name = "geri";
-            this.geri.Size = new System.Drawing.Size(140, 68);
+            this.geri.Size = new System.Drawing.Size(160, 65);
             this.geri.TabIndex = 13;
             this.geri.Text = "GERİ";
             this.geri.UseVisualStyleBackColor = false;

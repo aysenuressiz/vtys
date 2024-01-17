@@ -46,7 +46,7 @@
             // 
             this.hesabım.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("hesabım.BackgroundImage")));
             this.hesabım.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.hesabım.Location = new System.Drawing.Point(1100, 12);
+            this.hesabım.Location = new System.Drawing.Point(1099, 12);
             this.hesabım.Name = "hesabım";
             this.hesabım.Size = new System.Drawing.Size(45, 45);
             this.hesabım.TabIndex = 12;
@@ -59,7 +59,7 @@
             this.cikis.BackColor = System.Drawing.Color.Transparent;
             this.cikis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cikis.BackgroundImage")));
             this.cikis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cikis.Location = new System.Drawing.Point(1190, 12);
+            this.cikis.Location = new System.Drawing.Point(1198, 12);
             this.cikis.Name = "cikis";
             this.cikis.Size = new System.Drawing.Size(45, 45);
             this.cikis.TabIndex = 13;
@@ -71,10 +71,10 @@
             this.label2.BackColor = System.Drawing.Color.MidnightBlue;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1077, 61);
+            this.label2.Location = new System.Drawing.Point(1074, 61);
             this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(8, 4, 4, 4);
-            this.label2.Size = new System.Drawing.Size(89, 30);
+            this.label2.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
+            this.label2.Size = new System.Drawing.Size(95, 30);
             this.label2.TabIndex = 14;
             this.label2.Text = "Hesabım";
             // 
@@ -84,10 +84,10 @@
             this.label3.BackColor = System.Drawing.Color.MidnightBlue;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1186, 61);
+            this.label3.Location = new System.Drawing.Point(1188, 61);
             this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(6, 4, 4, 4);
-            this.label3.Size = new System.Drawing.Size(63, 30);
+            this.label3.Padding = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.label3.Size = new System.Drawing.Size(69, 30);
             this.label3.TabIndex = 15;
             this.label3.Text = "Çıkış";
             // 
