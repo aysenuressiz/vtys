@@ -36,9 +36,11 @@
             this.projeEkle = new System.Windows.Forms.Button();
             this.gorevEkle = new System.Windows.Forms.Button();
             this.calisanlar = new System.Windows.Forms.Button();
-            this.projeListele = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // hesabım
@@ -138,20 +140,6 @@
             this.calisanlar.UseVisualStyleBackColor = true;
             this.calisanlar.Click += new System.EventHandler(this.calisanlar_Click);
             // 
-            // projeListele
-            // 
-            this.projeListele.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("projeListele.BackgroundImage")));
-            this.projeListele.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.projeListele.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.projeListele.ForeColor = System.Drawing.Color.DimGray;
-            this.projeListele.Location = new System.Drawing.Point(203, 375);
-            this.projeListele.Name = "projeListele";
-            this.projeListele.Size = new System.Drawing.Size(190, 190);
-            this.projeListele.TabIndex = 19;
-            this.projeListele.Text = "Proje Listele";
-            this.projeListele.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.projeListele.UseVisualStyleBackColor = true;
-            // 
             // label13
             // 
             this.label13.BackColor = System.Drawing.Color.MidnightBlue;
@@ -178,6 +166,30 @@
             this.label12.Text = "     PROJECT  TRACKER      ";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(61, 326);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1126, 362);
+            this.dataGridView1.TabIndex = 22;
+            this.dataGridView1.Tag = "";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(454, 493);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(3);
+            this.label1.Size = new System.Drawing.Size(355, 30);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "// Projelerim listesi --> kodu eklenecek";
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -185,7 +197,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1265, 729);
-            this.Controls.Add(this.projeListele);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.calisanlar);
@@ -198,6 +211,7 @@
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOME PAGE";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,8 +224,9 @@
         private System.Windows.Forms.Button projeEkle;
         private System.Windows.Forms.Button gorevEkle;
         private System.Windows.Forms.Button calisanlar;
-        private System.Windows.Forms.Button projeListele;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
     }
 }

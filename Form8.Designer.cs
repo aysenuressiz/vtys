@@ -36,6 +36,9 @@
             this.geri = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.ekle = new System.Windows.Forms.Button();
+            this.sil = new System.Windows.Forms.Button();
+            this.guncelle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.projectTrackerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kullanicilerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -76,7 +79,7 @@
             this.geri.BackColor = System.Drawing.Color.MidnightBlue;
             this.geri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.geri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.geri.Location = new System.Drawing.Point(575, 622);
+            this.geri.Location = new System.Drawing.Point(204, 622);
             this.geri.Name = "geri";
             this.geri.Size = new System.Drawing.Size(140, 68);
             this.geri.TabIndex = 13;
@@ -110,11 +113,56 @@
             this.label12.Text = "     PROJECT  TRACKER      ";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // ekle
+            // 
+            this.ekle.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ekle.BackColor = System.Drawing.Color.MidnightBlue;
+            this.ekle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ekle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ekle.Location = new System.Drawing.Point(445, 622);
+            this.ekle.Name = "ekle";
+            this.ekle.Size = new System.Drawing.Size(140, 68);
+            this.ekle.TabIndex = 32;
+            this.ekle.Text = "EKLE";
+            this.ekle.UseVisualStyleBackColor = false;
+            this.ekle.Click += new System.EventHandler(this.ekle_Click);
+            // 
+            // sil
+            // 
+            this.sil.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.sil.BackColor = System.Drawing.Color.MidnightBlue;
+            this.sil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.sil.Location = new System.Drawing.Point(690, 622);
+            this.sil.Name = "sil";
+            this.sil.Size = new System.Drawing.Size(140, 68);
+            this.sil.TabIndex = 33;
+            this.sil.Text = "SİL";
+            this.sil.UseVisualStyleBackColor = false;
+            this.sil.Click += new System.EventHandler(this.sil_Click);
+            // 
+            // guncelle
+            // 
+            this.guncelle.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.guncelle.BackColor = System.Drawing.Color.MidnightBlue;
+            this.guncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guncelle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.guncelle.Location = new System.Drawing.Point(915, 622);
+            this.guncelle.Name = "guncelle";
+            this.guncelle.Size = new System.Drawing.Size(140, 68);
+            this.guncelle.TabIndex = 34;
+            this.guncelle.Text = "GÜNCELLE";
+            this.guncelle.UseVisualStyleBackColor = false;
+            this.guncelle.Click += new System.EventHandler(this.guncelle_Click);
+            // 
             // employeesPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1265, 729);
+            this.Controls.Add(this.guncelle);
+            this.Controls.Add(this.sil);
+            this.Controls.Add(this.ekle);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.geri);
@@ -138,5 +186,8 @@
         private System.Windows.Forms.Button geri;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button ekle;
+        private System.Windows.Forms.Button sil;
+        private System.Windows.Forms.Button guncelle;
     }
 }

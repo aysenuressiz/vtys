@@ -25,7 +25,7 @@ namespace vtys
             CustomizeDataGridView();
         }
 
-        private void LoadUserData()
+        public void LoadUserData()
         {
             try
             {
@@ -119,7 +119,55 @@ namespace vtys
             this.Hide(); 
             form1.ShowDialog();
         }
-    }
-}
 
-        
+        private void ekle_Click(object sender, EventArgs e)
+        {
+            SignUpPage form1 = new SignUpPage();
+            this.Hide();
+            form1.ShowDialog(); // *************************************  KAYIT OLDAN SONRA GERİ BASINCA ÇIKIŞ YAPMASIN      *********
+        }
+
+        private void sil_Click(object sender, EventArgs e)
+        {
+            // Kullanıcının tıkladığı satırdaki ID'yi al
+            int selectedUserID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value);
+
+            // Silme işlemini gerçekleştirmek için SQL sorgusu
+            string deleteQuery = "DELETE FROM Kullaniciler WHERE id = @userID";
+
+            try
+            {
+                using (SqlConnection connect = new SqlConnection("Data Source=UNIQUEA-PC\\SQLEXPRESS;Initial Catalog=ProjectTracker;Integrated Security=True"))
+                {
+                    connect.Open();
+                    using (SqlCommand command = new SqlCommand(deleteQuery, connect))
+                    {
+                        command.Parameters.AddWithValue("@userID", selectedUserID);
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Kullanıcı başarıyla silindi.");
+                            // Veriyi yeniden yükle
+                            LoadUserData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Kullanıcı silinirken bir hata oluştu.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata oluştu: " + ex.Message);
+            }
+        }
+
+        private void guncelle_Click(object sender, EventArgs e)
+        {
+            //****************************************      YÖNLENDİRME YAPILACAK        ****************************************
+        }
+    }
+
+}
