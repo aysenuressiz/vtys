@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.IO;
 
 namespace vtys
 {
@@ -44,7 +44,7 @@ namespace vtys
                         DataTable userData = new DataTable();
                         adapter.Fill(userData);
 
-                        // "Ad Soyad" sütununu oluştur
+                        // 'AdSoyad' sütununu oluştur ve 'Ad' ve 'Soyad' sütunlarını birleştir
                         DataColumn adSoyadColumn = new DataColumn("AdSoyad", typeof(string), "isim + ' ' + soyisim");
                         userData.Columns.Add(adSoyadColumn);
 
@@ -75,6 +75,8 @@ namespace vtys
 
                         // DataGridView'deki gereksiz sütunları gizle
                         dataGridView1.Columns["id"].Visible = false;
+                        dataGridView1.Columns["isim"].Visible = false;
+                        dataGridView1.Columns["soyisim"].Visible = false;
                         dataGridView1.Columns["fotografAdi"].Visible = false;
                     }
                 }
@@ -84,6 +86,7 @@ namespace vtys
                 MessageBox.Show("Hata oluştu: " + ex.Message);
             }
         }
+
         private void CustomizeDataGridView()
         {
             // DataGridView'i özelleştirme
@@ -106,7 +109,15 @@ namespace vtys
 
             // Detay sayfasına yönlendirme
             EmployeeDetailPage form9 = new EmployeeDetailPage(selectedUserID);
+            this.Hide();
             form9.ShowDialog();
+        }
+
+        private void geri_Click(object sender, EventArgs e)
+        {
+            HomePage form1 = new HomePage();
+            this.Hide(); 
+            form1.ShowDialog();
         }
     }
 }
