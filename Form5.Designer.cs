@@ -123,7 +123,7 @@
             this.projeEkle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.projeEkle.Location = new System.Drawing.Point(688, 478);
             this.projeEkle.Name = "projeEkle";
-            this.projeEkle.Size = new System.Drawing.Size(163, 57);
+            this.projeEkle.Size = new System.Drawing.Size(161, 57);
             this.projeEkle.TabIndex = 11;
             this.projeEkle.Text = "PROJE EKLE";
             this.projeEkle.UseVisualStyleBackColor = false;
@@ -134,9 +134,9 @@
             this.geri.BackColor = System.Drawing.Color.MidnightBlue;
             this.geri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.geri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.geri.Location = new System.Drawing.Point(514, 478);
+            this.geri.Location = new System.Drawing.Point(487, 478);
             this.geri.Name = "geri";
-            this.geri.Size = new System.Drawing.Size(128, 57);
+            this.geri.Size = new System.Drawing.Size(161, 57);
             this.geri.TabIndex = 12;
             this.geri.Text = "GERİ";
             this.geri.UseVisualStyleBackColor = false;
