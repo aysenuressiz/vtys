@@ -61,7 +61,7 @@ namespace vtys
                     connect.Open();
 
                     // Seçilen kullanıcının bilgilerini çeken SQL sorgusu
-                    string query = "SELECT isim, soyisim, fotografAdi FROM Kullaniciler WHERE id = @userID";
+                    string query = "SELECT isim, soyisim, fotograf FROM Kullaniciler WHERE id = @userID";
                     using (SqlCommand command = new SqlCommand(query, connect))
                     {
                         command.Parameters.AddWithValue("@userID", selectedUserID);
@@ -75,8 +75,8 @@ namespace vtys
                             soyadBox.Text = reader["soyisim"].ToString();
                             // Diğer bilgileri de ekle
 
-                            // Örnek olarak "fotografAdi" sütununu kullanıcıya göstermek için
-                            string imagePath = reader["fotografAdi"].ToString();
+                            // Örnek olarak "fotograf" sütununu kullanıcıya göstermek için
+                            string imagePath = reader["fotograf"].ToString();
                             if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
                             {
                                 fotograf.Image = Image.FromFile(imagePath);

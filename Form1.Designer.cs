@@ -46,7 +46,6 @@ namespace vtys
             // 
             // girisButton
             // 
-            this.girisButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.girisButton.BackColor = System.Drawing.Color.MidnightBlue;
             this.girisButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.girisButton.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -60,7 +59,6 @@ namespace vtys
             // 
             // isimLabel
             // 
-            this.isimLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.isimLabel.BackColor = System.Drawing.Color.Transparent;
             this.isimLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.isimLabel.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -73,7 +71,6 @@ namespace vtys
             // 
             // isimBox
             // 
-            this.isimBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.isimBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.isimBox.ForeColor = System.Drawing.Color.Black;
             this.isimBox.Location = new System.Drawing.Point(542, 260);
@@ -83,7 +80,6 @@ namespace vtys
             // 
             // sifreBox
             // 
-            this.sifreBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sifreBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sifreBox.ForeColor = System.Drawing.Color.Black;
             this.sifreBox.Location = new System.Drawing.Point(542, 345);
@@ -93,7 +89,6 @@ namespace vtys
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -117,7 +112,6 @@ namespace vtys
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -129,7 +123,6 @@ namespace vtys
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -141,7 +134,6 @@ namespace vtys
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -153,7 +145,6 @@ namespace vtys
             // 
             // kayitbutton
             // 
-            this.kayitbutton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.kayitbutton.BackColor = System.Drawing.Color.MidnightBlue;
             this.kayitbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kayitbutton.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -167,8 +158,8 @@ namespace vtys
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F);
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
