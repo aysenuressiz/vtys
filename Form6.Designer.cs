@@ -53,84 +53,91 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(280, 31);
+            this.label1.Location = new System.Drawing.Point(172, 31);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(9, 3, 3, 3);
-            this.label1.Size = new System.Drawing.Size(199, 33);
+            this.label1.Size = new System.Drawing.Size(307, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "PROJE SEÇİNİZ:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(268, 82);
+            this.label2.Location = new System.Drawing.Point(170, 82);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(2);
-            this.label2.Size = new System.Drawing.Size(211, 33);
+            this.label2.Size = new System.Drawing.Size(309, 33);
             this.label2.TabIndex = 1;
             this.label2.Text = "ÇALIŞAN SEÇİNİZ:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(254, 135);
+            this.label3.Location = new System.Drawing.Point(177, 135);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(2);
-            this.label3.Size = new System.Drawing.Size(225, 30);
+            this.label3.Size = new System.Drawing.Size(302, 30);
             this.label3.TabIndex = 2;
             this.label3.Text = "ADAM GÜN DEĞERİ:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(318, 187);
+            this.label4.Location = new System.Drawing.Point(175, 187);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(15, 2, 2, 2);
-            this.label4.Size = new System.Drawing.Size(161, 30);
+            this.label4.Size = new System.Drawing.Size(304, 30);
             this.label4.TabIndex = 3;
             this.label4.Text = "GÖREV ADI:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label5.Location = new System.Drawing.Point(280, 245);
+            this.label5.Location = new System.Drawing.Point(182, 245);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(10, 2, 2, 2);
-            this.label5.Size = new System.Drawing.Size(199, 30);
+            this.label5.Size = new System.Drawing.Size(297, 117);
             this.label5.TabIndex = 4;
             this.label5.Text = "GÖREV TANIMI:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label6.Location = new System.Drawing.Point(254, 393);
+            this.label6.Location = new System.Drawing.Point(180, 393);
             this.label6.Name = "label6";
             this.label6.Padding = new System.Windows.Forms.Padding(2);
-            this.label6.Size = new System.Drawing.Size(225, 32);
+            this.label6.Size = new System.Drawing.Size(299, 32);
             this.label6.TabIndex = 5;
             this.label6.Text = "BAŞLANGIÇ TARİHİ:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label7.Location = new System.Drawing.Point(320, 447);
+            this.label7.Location = new System.Drawing.Point(185, 447);
             this.label7.Name = "label7";
             this.label7.Padding = new System.Windows.Forms.Padding(2);
-            this.label7.Size = new System.Drawing.Size(159, 32);
+            this.label7.Size = new System.Drawing.Size(294, 32);
             this.label7.TabIndex = 6;
             this.label7.Text = "BİTİŞ TARİHİ:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // görevEkle
             // 

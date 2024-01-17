@@ -92,9 +92,9 @@
             this.projeEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.projeEkle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projeEkle.ForeColor = System.Drawing.Color.DimGray;
-            this.projeEkle.Location = new System.Drawing.Point(230, 76);
+            this.projeEkle.Location = new System.Drawing.Point(301, 99);
             this.projeEkle.Name = "projeEkle";
-            this.projeEkle.Size = new System.Drawing.Size(190, 190);
+            this.projeEkle.Size = new System.Drawing.Size(129, 135);
             this.projeEkle.TabIndex = 16;
             this.projeEkle.Text = "Proje Ekle";
             this.projeEkle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -107,9 +107,9 @@
             this.gorevEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gorevEkle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gorevEkle.ForeColor = System.Drawing.Color.DimGray;
-            this.gorevEkle.Location = new System.Drawing.Point(550, 352);
+            this.gorevEkle.Location = new System.Drawing.Point(534, 99);
             this.gorevEkle.Name = "gorevEkle";
-            this.gorevEkle.Size = new System.Drawing.Size(190, 190);
+            this.gorevEkle.Size = new System.Drawing.Size(129, 135);
             this.gorevEkle.TabIndex = 17;
             this.gorevEkle.Text = "Görev Ekle";
             this.gorevEkle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -122,9 +122,9 @@
             this.calisanlar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.calisanlar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calisanlar.ForeColor = System.Drawing.Color.DimGray;
-            this.calisanlar.Location = new System.Drawing.Point(230, 352);
+            this.calisanlar.Location = new System.Drawing.Point(749, 99);
             this.calisanlar.Name = "calisanlar";
-            this.calisanlar.Size = new System.Drawing.Size(190, 190);
+            this.calisanlar.Size = new System.Drawing.Size(129, 135);
             this.calisanlar.TabIndex = 18;
             this.calisanlar.Text = "Çalışanlar";
             this.calisanlar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -137,7 +137,7 @@
             this.projeListele.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.projeListele.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projeListele.ForeColor = System.Drawing.Color.DimGray;
-            this.projeListele.Location = new System.Drawing.Point(550, 76);
+            this.projeListele.Location = new System.Drawing.Point(203, 375);
             this.projeListele.Name = "projeListele";
             this.projeListele.Size = new System.Drawing.Size(190, 190);
             this.projeListele.TabIndex = 19;

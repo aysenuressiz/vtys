@@ -103,6 +103,7 @@
     <Compile Include="Form8.Designer.cs">
       <DependentUpon>Form8.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProjectTrackerDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -151,6 +152,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include=".editorconfig" />
     <None Include="ProjectTrackerDataSet.xsc">
       <DependentUpon>ProjectTrackerDataSet.xsd</DependentUpon>
     </None>

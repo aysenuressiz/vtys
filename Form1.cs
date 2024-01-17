@@ -72,7 +72,6 @@ namespace vtys
                         HomePage form = new HomePage();
                         this.Hide();
                         form.Show();
-                        MessageBox.Show("Giriş başarılı!");
                     } else {
                         MessageBox.Show("Bu kullanıcı bulunamadı."); }
                     }

@@ -176,9 +176,9 @@
             this.guncelle.BackColor = System.Drawing.Color.MidnightBlue;
             this.guncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guncelle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guncelle.Location = new System.Drawing.Point(668, 439);
+            this.guncelle.Location = new System.Drawing.Point(695, 439);
             this.guncelle.Name = "guncelle";
-            this.guncelle.Size = new System.Drawing.Size(161, 60);
+            this.guncelle.Size = new System.Drawing.Size(140, 68);
             this.guncelle.TabIndex = 25;
             this.guncelle.Text = "GÜNCELLE";
             this.guncelle.UseVisualStyleBackColor = false;
@@ -189,9 +189,9 @@
             this.geri.BackColor = System.Drawing.Color.MidnightBlue;
             this.geri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.geri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.geri.Location = new System.Drawing.Point(462, 439);
+            this.geri.Location = new System.Drawing.Point(490, 439);
             this.geri.Name = "geri";
-            this.geri.Size = new System.Drawing.Size(161, 60);
+            this.geri.Size = new System.Drawing.Size(140, 68);
             this.geri.TabIndex = 26;
             this.geri.Text = "GERİ";
             this.geri.UseVisualStyleBackColor = false;

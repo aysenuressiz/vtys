@@ -162,7 +162,7 @@
             this.kayitOl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.kayitOl.Location = new System.Drawing.Point(650, 487);
             this.kayitOl.Name = "kayitOl";
-            this.kayitOl.Size = new System.Drawing.Size(124, 65);
+            this.kayitOl.Size = new System.Drawing.Size(140, 68);
             this.kayitOl.TabIndex = 10;
             this.kayitOl.Text = "KAYIT OL";
             this.kayitOl.UseVisualStyleBackColor = false;
@@ -185,7 +185,7 @@
             this.geri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.geri.Location = new System.Drawing.Point(494, 487);
             this.geri.Name = "geri";
-            this.geri.Size = new System.Drawing.Size(124, 65);
+            this.geri.Size = new System.Drawing.Size(140, 68);
             this.geri.TabIndex = 12;
             this.geri.Text = "GERİ";
             this.geri.UseVisualStyleBackColor = false;
@@ -220,7 +220,7 @@
             this.label9.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label9.Location = new System.Drawing.Point(520, 232);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(252, 35);
+            this.label9.Size = new System.Drawing.Size(444, 35);
             this.label9.TabIndex = 15;
             this.label9.Text = "Lütfen e-mail adresinizi giriniz.";
             // 

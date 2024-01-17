@@ -73,48 +73,52 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(286, 79);
+            this.label1.Location = new System.Drawing.Point(132, 79);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(6, 2, 2, 2);
-            this.label1.Size = new System.Drawing.Size(157, 30);
+            this.label1.Size = new System.Drawing.Size(311, 30);
             this.label1.TabIndex = 6;
             this.label1.Text = "PROJE ADI:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(286, 334);
+            this.label2.Location = new System.Drawing.Point(100, 335);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(2);
-            this.label2.Size = new System.Drawing.Size(157, 59);
+            this.label2.Size = new System.Drawing.Size(343, 66);
             this.label2.TabIndex = 7;
             this.label2.Text = "BAŞLANGIÇ TARİHİ:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(286, 409);
+            this.label3.Location = new System.Drawing.Point(137, 409);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(2);
-            this.label3.Size = new System.Drawing.Size(157, 30);
+            this.label3.Size = new System.Drawing.Size(306, 59);
             this.label3.TabIndex = 8;
             this.label3.Text = "BİTİŞ TARİHİ:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(286, 132);
+            this.label4.Location = new System.Drawing.Point(127, 132);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(2);
-            this.label4.Size = new System.Drawing.Size(157, 60);
+            this.label4.Size = new System.Drawing.Size(316, 172);
             this.label4.TabIndex = 10;
             this.label4.Text = "PROJE AÇIKLAMASI:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // projeEkle
             // 
@@ -123,7 +127,7 @@
             this.projeEkle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.projeEkle.Location = new System.Drawing.Point(688, 478);
             this.projeEkle.Name = "projeEkle";
-            this.projeEkle.Size = new System.Drawing.Size(163, 57);
+            this.projeEkle.Size = new System.Drawing.Size(140, 68);
             this.projeEkle.TabIndex = 11;
             this.projeEkle.Text = "PROJE EKLE";
             this.projeEkle.UseVisualStyleBackColor = false;
@@ -136,7 +140,7 @@
             this.geri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.geri.Location = new System.Drawing.Point(514, 478);
             this.geri.Name = "geri";
-            this.geri.Size = new System.Drawing.Size(128, 57);
+            this.geri.Size = new System.Drawing.Size(140, 68);
             this.geri.TabIndex = 12;
             this.geri.Text = "GERİ";
             this.geri.UseVisualStyleBackColor = false;
