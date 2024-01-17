@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace vtys
 {
@@ -22,6 +23,17 @@ namespace vtys
             myAccountPage form1 = new myAccountPage();
             this.Hide(); // Form3'ü gizle
             form1.ShowDialog();
+
+            // Giriş yapan kullanıcının fotoğraf adını al
+            string fotografAdi = form1.GetFotografAdi();
+
+            // FotoğrafAdi boş değilse ve dosya mevcut ise butonun arka planını güncelle
+            if (!string.IsNullOrEmpty(fotografAdi) && File.Exists(fotografAdi))
+            {
+                hesabım.BackgroundImage = Image.FromFile(fotografAdi);
+            }
+
+            this.Show(); // Form3'ü tekrar göster
         }
 
         private void cikis_Click(object sender, EventArgs e)
@@ -53,4 +65,4 @@ namespace vtys
         }
     }
 }
-//**************************************************************************** EKLENEN FOTOĞRAFIN BURADA GÖZÜKMESİ SAĞLABNNACAK*******
+ 
