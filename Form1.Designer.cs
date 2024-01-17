@@ -110,9 +110,9 @@ namespace vtys
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(385, 157);
+            this.label2.Location = new System.Drawing.Point(367, 169);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(537, 390);
+            this.label2.Size = new System.Drawing.Size(548, 390);
             this.label2.TabIndex = 5;
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
@@ -177,7 +177,7 @@ namespace vtys
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(1265, 116);
             this.label7.TabIndex = 12;
-            this.label7.Text = "     PROJECT  TRACKER      ";
+            this.label7.Text = "      PROJECT  TRACKER      ";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LoginPage
