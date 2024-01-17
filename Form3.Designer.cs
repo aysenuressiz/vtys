@@ -36,10 +36,9 @@
             this.projeEkle = new System.Windows.Forms.Button();
             this.gorevEkle = new System.Windows.Forms.Button();
             this.calisanlar = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +46,7 @@
             // 
             this.hesabım.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("hesabım.BackgroundImage")));
             this.hesabım.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.hesabım.Location = new System.Drawing.Point(28, 12);
+            this.hesabım.Location = new System.Drawing.Point(1100, 12);
             this.hesabım.Name = "hesabım";
             this.hesabım.Size = new System.Drawing.Size(45, 45);
             this.hesabım.TabIndex = 12;
@@ -60,7 +59,7 @@
             this.cikis.BackColor = System.Drawing.Color.Transparent;
             this.cikis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cikis.BackgroundImage")));
             this.cikis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cikis.Location = new System.Drawing.Point(1173, 12);
+            this.cikis.Location = new System.Drawing.Point(1190, 12);
             this.cikis.Name = "cikis";
             this.cikis.Size = new System.Drawing.Size(45, 45);
             this.cikis.TabIndex = 13;
@@ -72,9 +71,9 @@
             this.label2.BackColor = System.Drawing.Color.MidnightBlue;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(11, 61);
+            this.label2.Location = new System.Drawing.Point(1077, 61);
             this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(3);
+            this.label2.Padding = new System.Windows.Forms.Padding(8, 4, 4, 4);
             this.label2.Size = new System.Drawing.Size(89, 30);
             this.label2.TabIndex = 14;
             this.label2.Text = "Hesabım";
@@ -85,9 +84,9 @@
             this.label3.BackColor = System.Drawing.Color.MidnightBlue;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1169, 61);
+            this.label3.Location = new System.Drawing.Point(1186, 61);
             this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(3);
+            this.label3.Padding = new System.Windows.Forms.Padding(6, 4, 4, 4);
             this.label3.Size = new System.Drawing.Size(63, 30);
             this.label3.TabIndex = 15;
             this.label3.Text = "Çıkış";
@@ -99,9 +98,9 @@
             this.projeEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.projeEkle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projeEkle.ForeColor = System.Drawing.Color.DimGray;
-            this.projeEkle.Location = new System.Drawing.Point(376, 141);
+            this.projeEkle.Location = new System.Drawing.Point(360, 130);
             this.projeEkle.Name = "projeEkle";
-            this.projeEkle.Size = new System.Drawing.Size(129, 135);
+            this.projeEkle.Size = new System.Drawing.Size(161, 161);
             this.projeEkle.TabIndex = 16;
             this.projeEkle.Text = "Proje Ekle";
             this.projeEkle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -115,9 +114,9 @@
             this.gorevEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gorevEkle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gorevEkle.ForeColor = System.Drawing.Color.DimGray;
-            this.gorevEkle.Location = new System.Drawing.Point(597, 141);
+            this.gorevEkle.Location = new System.Drawing.Point(581, 130);
             this.gorevEkle.Name = "gorevEkle";
-            this.gorevEkle.Size = new System.Drawing.Size(129, 135);
+            this.gorevEkle.Size = new System.Drawing.Size(161, 161);
             this.gorevEkle.TabIndex = 17;
             this.gorevEkle.Text = "Görev Ekle";
             this.gorevEkle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -131,50 +130,24 @@
             this.calisanlar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.calisanlar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calisanlar.ForeColor = System.Drawing.Color.DimGray;
-            this.calisanlar.Location = new System.Drawing.Point(810, 141);
+            this.calisanlar.Location = new System.Drawing.Point(794, 130);
             this.calisanlar.Name = "calisanlar";
-            this.calisanlar.Size = new System.Drawing.Size(129, 135);
+            this.calisanlar.Size = new System.Drawing.Size(161, 161);
             this.calisanlar.TabIndex = 18;
             this.calisanlar.Text = "Çalışanlar";
             this.calisanlar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.calisanlar.UseVisualStyleBackColor = true;
             this.calisanlar.Click += new System.EventHandler(this.calisanlar_Click);
             // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.MidnightBlue;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label13.Location = new System.Drawing.Point(0, 68);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(1265, 23);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "ANASAYFA";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.MidnightBlue;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label12.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label12.Location = new System.Drawing.Point(0, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(1265, 68);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "     PROJECT  TRACKER      ";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(61, 326);
+            this.dataGridView1.Location = new System.Drawing.Point(70, 305);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1126, 362);
+            this.dataGridView1.Size = new System.Drawing.Size(1126, 322);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.Tag = "";
             // 
@@ -190,13 +163,26 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "// Projelerim listesi --> kodu eklenecek";
             // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label12.Location = new System.Drawing.Point(0, 55);
+            this.label12.Name = "label12";
+            this.label12.Padding = new System.Windows.Forms.Padding(90, 12, 12, 12);
+            this.label12.Size = new System.Drawing.Size(300, 45);
+            this.label12.TabIndex = 24;
+            this.label12.Text = "ANA SAYFA";
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1265, 729);
+            this.ClientSize = new System.Drawing.Size(1282, 668);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
@@ -206,8 +192,6 @@
             this.Controls.Add(this.cikis);
             this.Controls.Add(this.hesabım);
             this.Controls.Add(this.projeEkle);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOME PAGE";
@@ -224,9 +208,8 @@
         private System.Windows.Forms.Button projeEkle;
         private System.Windows.Forms.Button gorevEkle;
         private System.Windows.Forms.Button calisanlar;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label12;
     }
 }
