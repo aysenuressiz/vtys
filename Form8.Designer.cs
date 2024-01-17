@@ -148,9 +148,9 @@
             this.guncelle.BackColor = System.Drawing.Color.MidnightBlue;
             this.guncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guncelle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guncelle.Location = new System.Drawing.Point(915, 622);
+            this.guncelle.Location = new System.Drawing.Point(909, 622);
             this.guncelle.Name = "guncelle";
-            this.guncelle.Size = new System.Drawing.Size(140, 68);
+            this.guncelle.Size = new System.Drawing.Size(146, 68);
             this.guncelle.TabIndex = 34;
             this.guncelle.Text = "GÜNCELLE";
             this.guncelle.UseVisualStyleBackColor = false;
