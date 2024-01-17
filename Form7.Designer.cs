@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeDetailPage));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.geri = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +46,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1040, 483);
+            this.dataGridView1.Size = new System.Drawing.Size(1057, 422);
             this.dataGridView1.TabIndex = 0;
             // 
             // geri
@@ -56,7 +55,7 @@
             this.geri.BackColor = System.Drawing.Color.MidnightBlue;
             this.geri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.geri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.geri.Location = new System.Drawing.Point(585, 627);
+            this.geri.Location = new System.Drawing.Point(594, 566);
             this.geri.Name = "geri";
             this.geri.Size = new System.Drawing.Size(140, 68);
             this.geri.TabIndex = 13;
@@ -64,31 +63,17 @@
             this.geri.UseVisualStyleBackColor = false;
             this.geri.Click += new System.EventHandler(this.geri_Click);
             // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.MidnightBlue;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label13.Location = new System.Drawing.Point(0, 68);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(1265, 23);
-            this.label13.TabIndex = 29;
-            this.label13.Text = "ÇALIŞANLARIN DETAYI";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // label12
             // 
             this.label12.BackColor = System.Drawing.Color.MidnightBlue;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label12.Location = new System.Drawing.Point(0, 0);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label12.Location = new System.Drawing.Point(0, 55);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(1265, 68);
-            this.label12.TabIndex = 28;
-            this.label12.Text = "     PROJECT  TRACKER      ";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label12.Padding = new System.Windows.Forms.Padding(70, 12, 12, 12);
+            this.label12.Size = new System.Drawing.Size(300, 45);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "ÇALIŞAN DETAY";
             // 
             // EmployeeDetailPage
             // 
@@ -96,8 +81,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1265, 729);
-            this.Controls.Add(this.label13);
+            this.ClientSize = new System.Drawing.Size(1282, 668);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.geri);
             this.Controls.Add(this.dataGridView1);
@@ -114,7 +98,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button geri;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
     }
 }
