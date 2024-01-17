@@ -17,6 +17,8 @@ namespace vtys
         static string constring = "Data Source=UNIQUEA-PC\\SQLEXPRESS;Initial Catalog=ProjectTracker;Integrated Security=True";
         SqlConnection connect = new SqlConnection(constring);
 
+        private byte[] fotografBytes; // Byte dizisi olarak resmi saklamak için
+
         string fotografAdi; // 'fotografAdi' değişkenini tanımlayın
         public myAccountPage()
         {
@@ -24,17 +26,18 @@ namespace vtys
             // Kullanıcının bilgilerini çek
             LoadUserData();
         }
-
+        public string GetFotografAdi()
+        {
+            return fotografAdi;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            // OpenFileDialog oluştur
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Resim Dosyaları|*.jpg;*.jpeg;*.png;*.bmp";
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                // Kullanıcının seçtiği resmi 'fotografAdi' değişkenine kaydet
-                fotografAdi = openFileDialog.FileName;
+                fotografBytes = File.ReadAllBytes(openFileDialog.FileName);
 
                 // Kullanıcının seçtiği resmi butonun resmi olarak ayarla
                 fotograf.BackgroundImage = Image.FromFile(openFileDialog.FileName);
@@ -54,7 +57,7 @@ namespace vtys
             try
             {
                 // Giriş yapan kullanıcının ID'sini kullanarak diğer bilgileri çekme
-                string query = "SELECT isim, soyisim, e_mail, sifre, telefon  FROM Kullaniciler WHERE id = @id";
+                string query = "SELECT isim, soyisim, e_mail, sifre, telefon, fotografAdi  FROM Kullaniciler WHERE id = @id";
 
                 using (SqlCommand komut = new SqlCommand(query, connect))
                 {
@@ -74,6 +77,15 @@ namespace vtys
                         emailBox.Text = userData.Rows[0]["e_mail"].ToString();
                         sifreBox.Text = userData.Rows[0]["sifre"].ToString();
                         telefonBox.Text = userData.Rows[0]["telefon"].ToString();
+
+                        // FotografAdi'ni güncelle
+                        fotografAdi = userData.Rows[0]["fotografAdi"].ToString();
+
+                        // FotoğrafAdi boş değilse ve dosya mevcut ise butonun arka planını güncelle
+                        if (!string.IsNullOrEmpty(fotografAdi) && File.Exists(fotografAdi))
+                        {
+                            fotograf.BackgroundImage = Image.FromFile(fotografAdi);
+                        }
                     }
                    
                 }
@@ -94,7 +106,7 @@ namespace vtys
                     connect.Open();
 
                     // UPDATE sorgusunu oluştur ve parametreleri ekleyerek güncelle
-                    string sorgu = "UPDATE Kullaniciler SET isim = @isim, soyisim = @soyisim, e_mail = @e_mail, sifre = @sifre, telefon = @telefon WHERE id = @id";
+                    string sorgu = "UPDATE Kullaniciler SET isim = @isim, soyisim = @soyisim, e_mail = @e_mail, sifre = @sifre, telefon = @telefon, fotografAdi = @fotografAdi WHERE id = @id";
                     using (SqlCommand komut = new SqlCommand(sorgu, connect))
                     {
                         komut.Parameters.AddWithValue("@id", LoginPage.GirisYapanKullaniciID);
@@ -103,8 +115,8 @@ namespace vtys
                         komut.Parameters.AddWithValue("@e_mail", emailBox.Text);
                         komut.Parameters.AddWithValue("@sifre", sifreBox.Text);
                         komut.Parameters.AddWithValue("@telefon", telefonBox.Text);
+                        komut.Parameters.AddWithValue("@fotograf", fotografBytes); // Byte dizisi olarak resmi ekleyin
 
-                        
                         // Sorguyu çalıştır
                         komut.ExecuteNonQuery();
 

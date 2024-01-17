@@ -17,8 +17,7 @@ namespace vtys
         {
             InitializeComponent();
         }
-        static string constring = "Data Source=UNIQUEA-PC\\SQLEXPRESS;Initial Catalog=ProjectTracker;Integrated Security=True";
-        SqlConnection connect = new SqlConnection(constring);
+        
         private void projeEkle_Click(object sender, EventArgs e)
         {
             try
