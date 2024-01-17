@@ -50,7 +50,7 @@ namespace vtys
             this.girisButton.BackColor = System.Drawing.Color.MidnightBlue;
             this.girisButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.girisButton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.girisButton.Location = new System.Drawing.Point(597, 382);
+            this.girisButton.Location = new System.Drawing.Point(460, 408);
             this.girisButton.Name = "girisButton";
             this.girisButton.Size = new System.Drawing.Size(140, 68);
             this.girisButton.TabIndex = 0;
@@ -110,9 +110,9 @@ namespace vtys
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(392, 157);
+            this.label2.Location = new System.Drawing.Point(385, 157);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(541, 450);
+            this.label2.Size = new System.Drawing.Size(537, 390);
             this.label2.TabIndex = 5;
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
@@ -146,7 +146,7 @@ namespace vtys
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(599, 483);
+            this.label5.Location = new System.Drawing.Point(671, 384);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(177, 30);
             this.label5.TabIndex = 8;
@@ -158,7 +158,7 @@ namespace vtys
             this.kayitbutton.BackColor = System.Drawing.Color.MidnightBlue;
             this.kayitbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kayitbutton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.kayitbutton.Location = new System.Drawing.Point(597, 506);
+            this.kayitbutton.Location = new System.Drawing.Point(667, 408);
             this.kayitbutton.Name = "kayitbutton";
             this.kayitbutton.Size = new System.Drawing.Size(140, 68);
             this.kayitbutton.TabIndex = 9;
@@ -170,7 +170,7 @@ namespace vtys
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label7.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 45F);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F);
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label7.Location = new System.Drawing.Point(0, 0);
