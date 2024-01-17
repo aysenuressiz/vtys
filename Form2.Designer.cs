@@ -172,9 +172,9 @@
             this.kayitOl.BackColor = System.Drawing.Color.MidnightBlue;
             this.kayitOl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kayitOl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.kayitOl.Location = new System.Drawing.Point(691, 533);
+            this.kayitOl.Location = new System.Drawing.Point(694, 533);
             this.kayitOl.Name = "kayitOl";
-            this.kayitOl.Size = new System.Drawing.Size(140, 68);
+            this.kayitOl.Size = new System.Drawing.Size(160, 65);
             this.kayitOl.TabIndex = 10;
             this.kayitOl.Text = "KAYIT OL";
             this.kayitOl.UseVisualStyleBackColor = false;
@@ -197,9 +197,9 @@
             this.geri.BackColor = System.Drawing.Color.MidnightBlue;
             this.geri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.geri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.geri.Location = new System.Drawing.Point(522, 533);
+            this.geri.Location = new System.Drawing.Point(511, 533);
             this.geri.Name = "geri";
-            this.geri.Size = new System.Drawing.Size(140, 68);
+            this.geri.Size = new System.Drawing.Size(160, 65);
             this.geri.TabIndex = 12;
             this.geri.Text = "GERİ";
             this.geri.UseVisualStyleBackColor = false;
@@ -272,7 +272,7 @@
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label12.Location = new System.Drawing.Point(0, 55);
             this.label12.Name = "label12";
-            this.label12.Padding = new System.Windows.Forms.Padding(40, 12, 12, 12);
+            this.label12.Padding = new System.Windows.Forms.Padding(28, 12, 12, 12);
             this.label12.Size = new System.Drawing.Size(300, 45);
             this.label12.TabIndex = 18;
             this.label12.Text = "SEN DE ARAMIZA KATIL";

@@ -155,7 +155,7 @@
             this.görevEkle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.görevEkle.Location = new System.Drawing.Point(778, 580);
             this.görevEkle.Name = "görevEkle";
-            this.görevEkle.Size = new System.Drawing.Size(140, 68);
+            this.görevEkle.Size = new System.Drawing.Size(160, 65);
             this.görevEkle.TabIndex = 7;
             this.görevEkle.Text = "GÖREV EKLE";
             this.görevEkle.UseVisualStyleBackColor = false;
@@ -169,7 +169,7 @@
             this.geri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.geri.Location = new System.Drawing.Point(580, 580);
             this.geri.Name = "geri";
-            this.geri.Size = new System.Drawing.Size(140, 68);
+            this.geri.Size = new System.Drawing.Size(160, 65);
             this.geri.TabIndex = 8;
             this.geri.Text = "GERİ";
             this.geri.UseVisualStyleBackColor = false;
