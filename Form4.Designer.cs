@@ -119,7 +119,7 @@
             this.adBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.adBox.Location = new System.Drawing.Point(563, 112);
             this.adBox.Name = "adBox";
-            this.adBox.Size = new System.Drawing.Size(247, 30);
+            this.adBox.Size = new System.Drawing.Size(272, 30);
             this.adBox.TabIndex = 19;
             // 
             // soyadBox
@@ -128,7 +128,7 @@
             this.soyadBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.soyadBox.Location = new System.Drawing.Point(563, 168);
             this.soyadBox.Name = "soyadBox";
-            this.soyadBox.Size = new System.Drawing.Size(247, 30);
+            this.soyadBox.Size = new System.Drawing.Size(272, 30);
             this.soyadBox.TabIndex = 20;
             // 
             // emailBox
@@ -137,7 +137,7 @@
             this.emailBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.emailBox.Location = new System.Drawing.Point(563, 231);
             this.emailBox.Name = "emailBox";
-            this.emailBox.Size = new System.Drawing.Size(247, 30);
+            this.emailBox.Size = new System.Drawing.Size(272, 30);
             this.emailBox.TabIndex = 21;
             // 
             // sifreBox
@@ -146,7 +146,7 @@
             this.sifreBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.sifreBox.Location = new System.Drawing.Point(563, 292);
             this.sifreBox.Name = "sifreBox";
-            this.sifreBox.Size = new System.Drawing.Size(247, 30);
+            this.sifreBox.Size = new System.Drawing.Size(272, 30);
             this.sifreBox.TabIndex = 22;
             // 
             // telefonBox
@@ -155,7 +155,7 @@
             this.telefonBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.telefonBox.Location = new System.Drawing.Point(563, 354);
             this.telefonBox.Name = "telefonBox";
-            this.telefonBox.Size = new System.Drawing.Size(247, 30);
+            this.telefonBox.Size = new System.Drawing.Size(272, 30);
             this.telefonBox.TabIndex = 23;
             // 
             // button1
@@ -176,9 +176,9 @@
             this.guncelle.BackColor = System.Drawing.Color.MidnightBlue;
             this.guncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guncelle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guncelle.Location = new System.Drawing.Point(695, 439);
+            this.guncelle.Location = new System.Drawing.Point(675, 439);
             this.guncelle.Name = "guncelle";
-            this.guncelle.Size = new System.Drawing.Size(140, 68);
+            this.guncelle.Size = new System.Drawing.Size(160, 68);
             this.guncelle.TabIndex = 25;
             this.guncelle.Text = "GÜNCELLE";
             this.guncelle.UseVisualStyleBackColor = false;
