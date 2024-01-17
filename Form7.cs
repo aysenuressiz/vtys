@@ -23,6 +23,7 @@ namespace vtys
         private void EmployeeDetailPage_Load(object sender, EventArgs e)
         {
             LoadUserTasks();
+            CustomizeDataGridView();
         }
 
         private void LoadUserTasks()
@@ -35,10 +36,10 @@ namespace vtys
                     connect.Open();
 
                     string query = "SELECT P.proje_adi, G.Gorev_adi, G.baslangic_tarihi, G.bitis_tarihi, G.durum " +
-                                   "FROM Kullaniciler K " +
-                                   "JOIN Gorevler G ON K.id = G.calisanID " +
-                                   "JOIN Projeler P ON G.projeID = P.id " +
-                                   "WHERE K.id = @userID";
+                                    "FROM Kullaniciler K " +
+                                    "JOIN Gorevler G ON K.id = G.calisanID " +
+                                    "JOIN Projeler P ON G.projeID = P.id " +
+                                    "WHERE K.id = @userID";
 
                     using (SqlCommand command = new SqlCommand(query, connect))
                     {
@@ -51,44 +52,36 @@ namespace vtys
                         // DataGridView'e kullanıcının görev bilgilerini bind et
                         dataGridView1.DataSource = userTasks;
 
-                        // DataGridView'deki sütun adlarını kontrol et
-                        foreach (DataGridViewColumn column in dataGridView1.Columns)
-                        {
-                            Console.WriteLine("Sütun Adı: " + column.Name);
-                        }
+                        // DataGridView'deki 'durum' sütununu bul
+                        DataGridViewColumn durumColumn = dataGridView1.Columns["durum"];
 
-                        // 'durum' sütununun varlığını kontrol et
-                        if (dataGridView1.Columns.Contains("durum"))
+                        if (durumColumn != null)
                         {
-                            // DataGridView'deki hücreleri duruma göre renklendir ve durumu yazdır
+                            // DataGridView'deki her bir satırı döngü ile kontrol et
                             foreach (DataGridViewRow row in dataGridView1.Rows)
                             {
-                                // 'durum' sütununun hücresinin değerini almadan önce null kontrolü yap
-                                if (row.Cells["durum"].Value != null)
+                                // 'durum' hücresinin değerini al ve küçük harfe çevir
+                                string taskStatus = row.Cells[durumColumn.Index].Value?.ToString().ToLower();
+
+                                // Duruma göre renk seçimi
+                                DataGridViewCellStyle style = new DataGridViewCellStyle();
+                                switch (taskStatus)
                                 {
-                                    string taskStatus = row.Cells["durum"].Value.ToString();
-                                    DataGridViewCellStyle style = new DataGridViewCellStyle();
-
-                                    switch (taskStatus)  // Küçük harfe çevirerek kontrol et
-                                    {
-                                        case "Tamamlandı":
-                                            style.BackColor = Color.Green; // Tamamlandı durumu için yeşil renk
-                                            row.Cells["durum"].Value = "Tamamlandı";
-                                            break;
-                                        case "Devam ediyor":
-                                            style.BackColor = Color.Yellow; // Devam Ediyor durumu için sarı renk
-                                            row.Cells["durum"].Value = "Devam Ediyor";
-                                            break;
-                                        case "Başlayacak":
-                                            style.BackColor = Color.Red; // Başlayacak durumu için kırmızı renk
-                                            row.Cells["durum"].Value = "Başlayacak";
-                                            break;
-                                        default:
-                                            break;
-                                    }
-
-                                    row.DefaultCellStyle = style;
+                                    case "tamamlandı":
+                                        style.BackColor = Color.Green;
+                                        break;
+                                    case "devam ediyor":
+                                        style.BackColor = Color.Yellow;
+                                        break;
+                                    case "başlayacak":
+                                        style.BackColor = Color.Red;
+                                        break;
+                                    default:
+                                        break;
                                 }
+
+                                // Hücrenin stilini belirtilen stille değiştir
+                                row.Cells[durumColumn.Index].Style = style;
                             }
                         }
                         else
@@ -101,6 +94,59 @@ namespace vtys
             catch (Exception ex)
             {
                 MessageBox.Show("Hata oluştu: " + ex.Message);
+            }
+        }
+
+        private void CustomizeDataGridView()
+        {
+            // DataGridView'i özelleştirme
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridView1.BackgroundColor = Color.White;
+
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            // DataGridView'deki 'durum' sütununu bul
+            DataGridViewColumn durumColumn = dataGridView1.Columns["durum"];
+
+            if (durumColumn != null)
+            {
+                // DataGridView'deki her bir satırı döngü ile kontrol et
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    // 'durum' hücresinin değerini al ve küçük harfe çevir
+                    string taskStatus = row.Cells[durumColumn.Index].Value?.ToString().ToLower();
+
+                    // Duruma göre renk seçimi
+                    DataGridViewCellStyle style = new DataGridViewCellStyle();
+                    switch (taskStatus)
+                    {
+                        case "tamamlandı":
+                            style.BackColor = Color.Green;
+                            break;
+                        case "devam ediyor":
+                            style.BackColor = Color.Yellow;
+                            break;
+                        case "başlayacak":
+                            style.BackColor = Color.Red;
+                            break;
+                        default:
+                            break;
+                    }
+
+                    // Hücrenin stilini belirtilen stille değiştir
+                    row.Cells[durumColumn.Index].Style = style;
+                }
+            }
+            else
+            {
+                MessageBox.Show("'durum' sütunu bulunamadı.");
             }
         }
 
