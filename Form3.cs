@@ -53,3 +53,4 @@ namespace vtys
         }
     }
 }
+//**************************************************************************** EKLENEN FOTOĞRAFIN BURADA GÖZÜKMESİ SAĞLABNNACAK*******
