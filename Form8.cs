@@ -37,7 +37,7 @@ namespace vtys
                     connect.Open();
 
                     // Kullanıcıların listesini çeken SQL sorgusu
-                    string query = "SELECT id, isim, soyisim, fotograf" +
+                    string query = "SELECT id, isim, soyisim, fotograf " +
                                    "FROM Kullaniciler";
                     using (SqlCommand command = new SqlCommand(query, connect))
                     {
