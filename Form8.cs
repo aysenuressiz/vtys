@@ -123,9 +123,8 @@ namespace vtys
 
         private void ekle_Click(object sender, EventArgs e)
         {
-            SignUpPage form1 = new SignUpPage();
-            this.Hide();
-            form1.ShowDialog(); // *************************************  KAYIT OLDAN SONRA GERİ BASINCA ÇIKIŞ YAPMASIN      *********
+            AddEmployePage form1 = new AddEmployePage();
+            form1.ShowDialog(); 
         }
 
         private void sil_Click(object sender, EventArgs e)
@@ -167,8 +166,9 @@ namespace vtys
 
         private void guncelle_Click(object sender, EventArgs e)
         {
-            //****************************************      YÖNLENDİRME YAPILACAK        ****************************************
+
+            UpdateEmployeePage form1 = new UpdateEmployeePage();
+            form1.ShowDialog();
         }
     }
-
 }
