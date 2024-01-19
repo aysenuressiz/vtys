@@ -37,13 +37,13 @@
             this.gorevEkle = new System.Windows.Forms.Button();
             this.calisanlar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // hesabım
             // 
+            this.hesabım.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hesabım.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("hesabım.BackgroundImage")));
             this.hesabım.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.hesabım.Location = new System.Drawing.Point(1099, 12);
@@ -68,13 +68,14 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.BackColor = System.Drawing.Color.MidnightBlue;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(1074, 61);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
-            this.label2.Size = new System.Drawing.Size(95, 30);
+            this.label2.Size = new System.Drawing.Size(99, 30);
             this.label2.TabIndex = 14;
             this.label2.Text = "Hesabım";
             // 
@@ -87,7 +88,7 @@
             this.label3.Location = new System.Drawing.Point(1188, 61);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(8, 4, 4, 4);
-            this.label3.Size = new System.Drawing.Size(69, 30);
+            this.label3.Size = new System.Drawing.Size(72, 30);
             this.label3.TabIndex = 15;
             this.label3.Text = "Çıkış";
             // 
@@ -141,7 +142,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(70, 305);
@@ -150,18 +151,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(1126, 322);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.Tag = "";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(454, 493);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(3);
-            this.label1.Size = new System.Drawing.Size(355, 30);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "// Projelerim listesi --> kodu eklenecek";
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label12
             // 
@@ -183,7 +173,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1282, 668);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -209,7 +198,6 @@
         private System.Windows.Forms.Button gorevEkle;
         private System.Windows.Forms.Button calisanlar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label12;
     }
 }

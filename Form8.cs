@@ -37,7 +37,7 @@ namespace vtys
                     connect.Open();
 
                     // Kullanıcıların listesini çeken SQL sorgusu
-                    string query = "SELECT id, isim, soyisim, fotografAdi " +
+                    string query = "SELECT id, isim, soyisim, fotograf " +
                                    "FROM Kullaniciler";
                     using (SqlCommand command = new SqlCommand(query, connect))
                     {
@@ -54,8 +54,8 @@ namespace vtys
                         // DataGridView'deki herhangi bir hücreye tıklanıldığında o satırdaki kullanıcı detaylarını gösteren olay ekle
                         dataGridView1.CellClick += dataGridView1_CellClick;
 
-                        // DataGridView'deki "fotografAdi" sütununu resim olarak görüntüle
-                        dataGridView1.Columns["fotografAdi"].Visible = false; // Resim dosya yolu gizli
+                        // DataGridView'deki "fotograf" sütununu resim olarak görüntüle
+                        dataGridView1.Columns["fotograf"].Visible = false; // Resim dosya yolu gizli
                         using (DataGridViewImageColumn imageColumn = new DataGridViewImageColumn())
                         {
                             imageColumn.HeaderText = "Profil Fotoğrafı";
@@ -66,7 +66,7 @@ namespace vtys
                         // DataGridView'e resimleri yükle
                         for (int i = 0; i < userData.Rows.Count; i++)
                         {
-                            string imagePath = userData.Rows[i]["fotografAdi"].ToString();
+                            string imagePath = userData.Rows[i]["fotograf"].ToString();
                             if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
                             {
                                 Image image = Image.FromFile(imagePath);
@@ -78,7 +78,7 @@ namespace vtys
                         dataGridView1.Columns["id"].Visible = false;
                         dataGridView1.Columns["isim"].Visible = false;
                         dataGridView1.Columns["soyisim"].Visible = false;
-                        dataGridView1.Columns["fotografAdi"].Visible = false;
+                        dataGridView1.Columns["fotograf"].Visible = false;
                     }
                 }
             }
@@ -123,9 +123,8 @@ namespace vtys
 
         private void ekle_Click(object sender, EventArgs e)
         {
-            SignUpPage form1 = new SignUpPage();
-            this.Hide();
-            form1.ShowDialog(); // *************************************  KAYIT OLDAN SONRA GERİ BASINCA ÇIKIŞ YAPMASIN      *********
+            AddEmployePage form1 = new AddEmployePage();
+            form1.ShowDialog(); 
         }
 
         private void sil_Click(object sender, EventArgs e)
@@ -167,8 +166,9 @@ namespace vtys
 
         private void guncelle_Click(object sender, EventArgs e)
         {
-            //****************************************      YÖNLENDİRME YAPILACAK        ****************************************
+
+            UpdateEmployeePage form1 = new UpdateEmployeePage();
+            form1.ShowDialog();
         }
     }
-
 }

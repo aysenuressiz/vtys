@@ -106,6 +106,7 @@ namespace vtys
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,9 +146,9 @@ namespace vtys
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(687, 414);
+            this.label5.Location = new System.Drawing.Point(677, 414);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(154, 30);
+            this.label5.Size = new System.Drawing.Size(182, 30);
             this.label5.TabIndex = 8;
             this.label5.Text = "Hesabın yok mu?";
             // 
@@ -167,8 +168,8 @@ namespace vtys
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F);
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;

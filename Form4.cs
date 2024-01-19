@@ -57,7 +57,7 @@ namespace vtys
             try
             {
                 // Giriş yapan kullanıcının ID'sini kullanarak diğer bilgileri çekme
-                string query = "SELECT isim, soyisim, e_mail, sifre, telefon, fotografAdi  FROM Kullaniciler WHERE id = @id";
+                string query = "SELECT isim, soyisim, e_mail, sifre, telefon, fotograf  FROM Kullaniciler WHERE id = @id";
 
                 using (SqlCommand komut = new SqlCommand(query, connect))
                 {
@@ -79,7 +79,7 @@ namespace vtys
                         telefonBox.Text = userData.Rows[0]["telefon"].ToString();
 
                         // FotografAdi'ni güncelle
-                        fotografAdi = userData.Rows[0]["fotografAdi"].ToString();
+                        fotografAdi = userData.Rows[0]["fotograf"].ToString();
 
                         // FotoğrafAdi boş değilse ve dosya mevcut ise butonun arka planını güncelle
                         if (!string.IsNullOrEmpty(fotografAdi) && File.Exists(fotografAdi))
@@ -106,7 +106,7 @@ namespace vtys
                     connect.Open();
 
                     // UPDATE sorgusunu oluştur ve parametreleri ekleyerek güncelle
-                    string sorgu = "UPDATE Kullaniciler SET isim = @isim, soyisim = @soyisim, e_mail = @e_mail, sifre = @sifre, telefon = @telefon, fotografAdi = @fotografAdi WHERE id = @id";
+                    string sorgu = "UPDATE Kullaniciler SET isim = @isim, soyisim = @soyisim, e_mail = @e_mail, sifre = @sifre, telefon = @telefon, fotograf = @fotograf WHERE id = @id";
                     using (SqlCommand komut = new SqlCommand(sorgu, connect))
                     {
                         komut.Parameters.AddWithValue("@id", LoginPage.GirisYapanKullaniciID);

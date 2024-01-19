@@ -16,7 +16,7 @@ namespace vtys
     {
         private bool sifreGizli = true;
         // Giriş yapan kullanıcının ID'sini saklamak için global değişken
-        public static string GirisYapanKullaniciID;
+        public static int GirisYapanKullaniciID;
         public LoginPage()
         {
             InitializeComponent();
@@ -62,7 +62,8 @@ namespace vtys
                     komut.Parameters.AddWithValue("@sifre", sifre);
 
                     // Giriş yapan kullanıcının ID'sini al
-                    GirisYapanKullaniciID = komut.ExecuteScalar()?.ToString();
+                    GirisYapanKullaniciID = Convert.ToInt32(komut.ExecuteScalar());
+
 
                     int kullaniciSayisi = (int)komut.ExecuteScalar();
 
