@@ -171,7 +171,6 @@ namespace vtys
 
         private void guncelle_Click(object sender, EventArgs e)
         {
-
             UpdateEmployeePage form1 = new UpdateEmployeePage();
             form1.ShowDialog();
         }

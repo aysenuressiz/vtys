@@ -65,9 +65,7 @@ namespace vtys
 
         private void geri_Click(object sender, EventArgs e)
         {
-            employeesPage form1 = new employeesPage();
             this.Hide();
-            form1.ShowDialog();
         }
 
 
@@ -96,6 +94,7 @@ namespace vtys
 
                     connect.Close();
                 }
+                this.Hide();
             }
             catch (Exception ex)
             {

@@ -158,6 +158,7 @@
             this.geri.TabIndex = 57;
             this.geri.Text = "GERİ";
             this.geri.UseVisualStyleBackColor = false;
+            this.geri.Click += new System.EventHandler(this.geri_Click);
             // 
             // ekle
             // 

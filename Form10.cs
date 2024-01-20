@@ -54,12 +54,18 @@ namespace vtys
                     // Bağlantıyı kapat
                     connect.Close();
                 }
+                this.Hide();
             }
             catch (Exception ex)
             {
                 // Hata durumunda kullanıcıya bilgi ver
                 MessageBox.Show("İşlem sırasında bir hata oluştu: " + ex.Message);
             }
+        }
+
+        private void geri_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
