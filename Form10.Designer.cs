@@ -171,6 +171,7 @@
             this.ekle.TabIndex = 58;
             this.ekle.Text = "EKLE";
             this.ekle.UseVisualStyleBackColor = false;
+            this.ekle.Click += new System.EventHandler(this.ekle_Click);
             // 
             // AddEmployePage
             // 
