@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Net.Mail;
 
 namespace vtys
 {
@@ -19,25 +20,52 @@ namespace vtys
         {
             try
             {
-                // Kullanıcıdan alınan değerleri değişkenlere atayalım
+                // Kullanıcıdan alınan değerleri değişkenlere ata
                 string isim = adBox.Text;
                 string soyisim = soyadBox.Text;
                 string e_mail = emailBox.Text;
                 string sifre = sifreBox.Text;
 
+                // TextBox'ların boş olup olmadığını kontrol et
+                if (string.IsNullOrWhiteSpace(isim) || string.IsNullOrWhiteSpace(soyisim) || string.IsNullOrWhiteSpace(e_mail) || string.IsNullOrWhiteSpace(sifre))
+                {
+                    MessageBox.Show("Lütfen tüm alanları doldurunuz.");
+                    return;
+                }
 
-                //********************************************************************************************************************TEXTBOXLARIN BOŞ DEĞER KABUL ETMEME DURUMU EKLENECEK!!!
-                //********************************************************************************************************************GEREKSŞZ KSYIT OLMA DURUMLARI ORTADAN KSLDIRILACAK!!!
+                // Şifre kutularının boş olup olmadığını kontrol et
+                if (string.IsNullOrEmpty(sifreBox.Text) || string.IsNullOrEmpty(sifreBox1.Text))
+                {
+                    MessageBox.Show("Şifre boş olamaz.");
+                    return;
+                }
 
+                // Şifre kutularının eşleşip eşleşmediğini kontrol et
+                if (sifreBox.Text != sifreBox1.Text)
+                {
+                    MessageBox.Show("Şifreler uyuşmuyor. Lütfen aynı şifreyi giriniz.");
+                    return;
+                }
 
-                // Veritabanı bağlantısı oluşturalım
+                // Mail adresinin formata uygun olup olmadığını kontrol et
+                try
+                {
+                    MailAddress mailAddress = new MailAddress(e_mail);
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Lütfen geçerli bir e-posta adresi giriniz.");
+                    return;
+                }
+
+                // Veritabanı bağlantısı oluştur
                 string constring = "Data Source=UNIQUEA-PC\\SQLEXPRESS;Initial Catalog=ProjectTracker;Integrated Security=True";
                 using (SqlConnection connect = new SqlConnection(constring))
                 {
-                    // Bağlantıyı açalım
+                    // Bağlantıyı aç
                     connect.Open();
 
-                    // INSERT sorgusunu oluşturalım ve parametreleri ekleyelim
+                    // INSERT sorgusunu oluştur ve parametreleri ekle
                     string sorgu = "INSERT INTO Kullaniciler (isim, soyisim, e_mail, sifre) VALUES (@isim, @soyisim, @e_mail, @sifre)";
                     using (SqlCommand komut = new SqlCommand(sorgu, connect))
                     {
@@ -46,13 +74,13 @@ namespace vtys
                         komut.Parameters.AddWithValue("@e_mail", e_mail);
                         komut.Parameters.AddWithValue("@sifre", sifre);
 
-                        // Sorguyu çalıştıralım
+                        // Sorguyu çalıştır
                         komut.ExecuteNonQuery();
 
-                        // İşlem başarılı mesajını gösterelim
+                        // İşlem başarılı mesajı
                         MessageBox.Show("Kayıt başarıyla eklendi.Lütfen giriş yapınız.");
 
-                        // Form1'e yönlendirme işlemi
+                        // Giriş ekranına yönlendirme
                         LoginPage form = new LoginPage();
                         this.Hide(); // Form2'yi gizle
                         form.ShowDialog();
@@ -61,7 +89,7 @@ namespace vtys
             }
             catch (Exception hata)
             {
-                // Hata durumunda kullanıcıya bilgi verelim
+                // Hata durumunda kullanıcıya bilgi ver
                 MessageBox.Show("Hata meydana geldi!" + hata.Message);
             }
         }
@@ -70,8 +98,7 @@ namespace vtys
             // Şifre kutusundaki metni güncellediğimizde, her karakterin yerine '*' ekleyerek gerçek zamanlı gösterim sağla
             if (sifreGizli)
             {
-                // Şifre kutusundaki metni '*' karakterleriyle değiştir
-                string yildizliSifre = new string('*', sifreBox.Text.Length);
+                string yildizliSifre = new string('*', sifreBox.Text.Length);// Şifre kutusundaki metni '*' karakterleriyle değiştir
                 sifreBox.UseSystemPasswordChar = false; // Karakter değiştirme işlemi yapılırken özelliği geçici olarak kapat
                 sifreBox.Text = yildizliSifre;
                 sifreBox.Select(yildizliSifre.Length, 0); // Cursor'ı metnin sonuna getir
@@ -90,12 +117,11 @@ namespace vtys
             // Şifre kutusundaki metni güncellediğimizde, her karakterin yerine '*' ekleyerek gerçek zamanlı gösterim sağla
             if (sifreGizli)
             {
-                // Şifre kutusundaki metni '*' karakterleriyle değiştir
-                string yildizliSifre = new string('*', sifreBox.Text.Length);
-                sifreBox.UseSystemPasswordChar = false; // Karakter değiştirme işlemi yapılırken özelliği geçici olarak kapat
-                sifreBox.Text = yildizliSifre;
-                sifreBox.Select(yildizliSifre.Length, 0); // Cursor'ı metnin sonuna getir
-                sifreBox.UseSystemPasswordChar = true; // Karakter değiştirme işlemi tamamlandığında özelliği tekrar aç
+                string yildizliSifre = new string('*', sifreBox1.Text.Length);// Şifre kutusundaki metni '*' karakterleriyle değiştir
+                sifreBox1.UseSystemPasswordChar = false; // Karakter değiştirme işlemi yapılırken özelliği geçici olarak kapat
+                sifreBox1.Text = yildizliSifre;
+                sifreBox1.Select(yildizliSifre.Length, 0); // Cursor'ı metnin sonuna getir
+                sifreBox1.UseSystemPasswordChar = true; // Karakter değiştirme işlemi tamamlandığında özelliği tekrar aç
             }
         }
 
@@ -124,10 +150,12 @@ namespace vtys
 
         private void geri_Click(object sender, EventArgs e)
         {
+            //Giriş sayfasına yönlendir
             LoginPage form1 = new LoginPage();
             this.Hide(); // Form2'yi gizle
             form1.ShowDialog();
         }
+
     }
 }
 

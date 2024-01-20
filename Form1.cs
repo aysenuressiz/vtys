@@ -73,7 +73,7 @@ namespace vtys
                     if (kullaniciSayisi > 0){
                         // Anasayfaya yönlendir
                         HomePage form = new HomePage(); 
-                        this.Hide();
+                        this.Hide(); //Form1 i gizle
                         form.Show();
                     } else {
                         MessageBox.Show("Bu kullanıcı bulunamadı."); }
@@ -110,7 +110,7 @@ namespace vtys
         {
             // Kayıt Ol sayfasına yönlendir
             SignUpPage form2 = new SignUpPage();
-            this.Hide();
+            this.Hide(); // Form1 i Gizle
             form2.Show();
         }
     }

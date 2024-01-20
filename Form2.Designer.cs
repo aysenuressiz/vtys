@@ -113,6 +113,7 @@
             this.sifreBox1.Size = new System.Drawing.Size(247, 30);
             this.sifreBox1.TabIndex = 5;
             this.sifreBox1.Click += new System.EventHandler(this.sifreBox1_Click);
+            this.sifreBox1.TextChanged += new System.EventHandler(this.sifreBox1_TextChanged);
             // 
             // label2
             // 
