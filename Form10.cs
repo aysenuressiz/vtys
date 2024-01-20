@@ -30,6 +30,13 @@ namespace vtys
                 string email = mailBox.Text;
                 string gecicisifre = geciciSifreBox.Text;
 
+                // TextBox'ların boş olup olmadığını kontrol et
+                if (string.IsNullOrEmpty(isim) || string.IsNullOrEmpty(soyisim) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(gecicisifre))
+                {
+                    MessageBox.Show("Lütfen tüm alanları doldurun.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Eğer bir alan boşsa işlemi durdur
+                }
+
                 // Veritabanı bağlantısı oluştur
                 using (SqlConnection connect = new SqlConnection(constring))
                 {
@@ -37,12 +44,13 @@ namespace vtys
                     connect.Open();
 
                     // INSERT sorgusunu oluştur ve parametreleri ekle
-                    string sorgu = "INSERT INTO Kullaniciler (isim, soyisim, e_mail) VALUES (@isim, @soyisim, @email)";
+                    string sorgu = "INSERT INTO Kullaniciler (isim, soyisim, e_mail, sifre) VALUES (@isim, @soyisim, @email, @sifre)";
                     using (SqlCommand komut = new SqlCommand(sorgu, connect))
                     {
                         komut.Parameters.AddWithValue("@isim", isim);
                         komut.Parameters.AddWithValue("@soyisim", soyisim);
                         komut.Parameters.AddWithValue("@email", email);
+                        komut.Parameters.AddWithValue("@sifre", gecicisifre);
 
                         // Sorguyu çalıştır
                         komut.ExecuteNonQuery();

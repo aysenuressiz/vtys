@@ -73,6 +73,7 @@ namespace vtys
                         dataGridView1.Columns["soyisim"].Visible = false;
                         dataGridView1.Columns["fotograf"].Visible = false;
                     }
+                    connect.Close();
                 }
             }
             catch (Exception ex)
@@ -152,6 +153,7 @@ namespace vtys
                             MessageBox.Show("Kullanıcı silinirken bir hata oluştu.");
                         }
                     }
+                    connect.Close();
                 }
             }
             catch (Exception ex)

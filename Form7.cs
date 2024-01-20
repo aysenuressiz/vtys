@@ -54,6 +54,7 @@ namespace vtys
                         // DataGridView'e kullanıcının görev bilgilerini bind et
                         dataGridView1.DataSource = userTasks;
                     }
+                    connect.Close();
                 }
             }
             catch (Exception ex)

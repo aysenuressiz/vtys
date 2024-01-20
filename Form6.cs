@@ -114,6 +114,7 @@ namespace vtys
                         // İşlem başarılı mesajını gösterelim
                         MessageBox.Show("Görev başarıyla eklendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+                    connect.Close();
                 }
             }
             catch (Exception ex)

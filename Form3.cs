@@ -92,7 +92,7 @@ namespace vtys
 
                 // DataGridView'e DataTable'ı bağla
                 dataGridView1.DataSource = dataTable;
-
+                connect.Close();
 
             }
             catch (SqlException ex)

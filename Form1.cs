@@ -31,8 +31,7 @@ namespace vtys
         private void girisButton_Click(object sender, EventArgs e){
             try
             {
-                if (connect.State == ConnectionState.Closed)
-                    connect.Open();
+                connect.Open();
 
                 // Kullanıcı adı ve şifreyi kontrol et
                 string e_mail = isimBox.Text;
@@ -87,6 +86,7 @@ namespace vtys
                         }
                     }
                 }
+                connect.Close();
             }
             catch (Exception hata) {
                 MessageBox.Show("Hata meydana geldi!" + hata.Message);
