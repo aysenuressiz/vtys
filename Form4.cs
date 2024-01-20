@@ -53,60 +53,68 @@ namespace vtys
 
         
         private void LoadUserData(){
-        
+
             try
             {
-                // Giriş yapan kullanıcının ID'sini kullanarak diğer bilgileri çekme
-                string query = "SELECT isim, soyisim, e_mail, sifre, telefon, fotograf  FROM Kullaniciler WHERE id = @id";
-
-                using (SqlCommand komut = new SqlCommand(query, connect))
+                using (SqlConnection connect = new SqlConnection(constring))
                 {
-                    // Giriş yapan kullanıcının ID'sini parametre olarak ekleyin
-                    komut.Parameters.AddWithValue("@id", LoginPage.GirisYapanKullaniciID);
+                    connect.Open();
 
-                    // Veritabanından verileri çek
-                    SqlDataAdapter adapter = new SqlDataAdapter(komut);
-                    DataTable userData = new DataTable();
-                    adapter.Fill(userData);
+                    string query = "SELECT isim, soyisim, e_mail, sifre, telefon, fotograf FROM Kullaniciler WHERE id = @id";
 
-                    // TextBox'lara verileri yerleştir
-                    if (userData.Rows.Count > 0)
+                    using (SqlCommand komut = new SqlCommand(query, connect))
                     {
-                        adBox.Text = userData.Rows[0]["isim"].ToString();
-                        soyadBox.Text = userData.Rows[0]["soyisim"].ToString();
-                        emailBox.Text = userData.Rows[0]["e_mail"].ToString();
-                        sifreBox.Text = userData.Rows[0]["sifre"].ToString();
-                        telefonBox.Text = userData.Rows[0]["telefon"].ToString();
+                        komut.Parameters.AddWithValue("@id", LoginPage.GirisYapanKullaniciID);
 
-                        // FotografAdi'ni güncelle
-                        fotografAdi = userData.Rows[0]["fotograf"].ToString();
+                        SqlDataAdapter adapter = new SqlDataAdapter(komut);
+                        DataTable userData = new DataTable();
+                        adapter.Fill(userData);
 
-                        // FotoğrafAdi boş değilse ve dosya mevcut ise butonun arka planını güncelle
-                        if (!string.IsNullOrEmpty(fotografAdi) && File.Exists(fotografAdi))
+                        if (userData.Rows.Count > 0)
                         {
-                            fotograf.BackgroundImage = Image.FromFile(fotografAdi);
+                            adBox.Text = userData.Rows[0]["isim"].ToString();
+                            soyadBox.Text = userData.Rows[0]["soyisim"].ToString();
+                            emailBox.Text = userData.Rows[0]["e_mail"].ToString();
+                            sifreBox.Text = userData.Rows[0]["sifre"].ToString();
+                            telefonBox.Text = userData.Rows[0]["telefon"].ToString();
+
+                            fotografAdi = userData.Rows[0]["fotograf"].ToString();
+
+                            if (!string.IsNullOrEmpty(fotografAdi) && File.Exists(fotografAdi))
+                            {
+                                fotograf.BackgroundImage = Image.FromFile(fotografAdi);
+                            }
                         }
                     }
-                   
                 }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Hatası oluştu: " + ex.Number + " - " + ex.Message);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Hata oluştu: " + ex.Message);
+            }
+            finally
+            {
+                // Bağlantının açık olup olmadığını kontrol et ve kapat
+                if (connect.State == ConnectionState.Open)
+                {
+                    connect.Close();
+                }
             }
         }
         private void guncelle_Click(object sender, EventArgs e)
         {
             try
             {
-                // Veritabanı bağlantısı oluştur
-                string constring = "Data Source=UNIQUEA-PC\\SQLEXPRESS;Initial Catalog=ProjectTracker;Integrated Security=True";
                 using (SqlConnection connect = new SqlConnection(constring))
                 {
                     connect.Open();
 
-                    // UPDATE sorgusunu oluştur ve parametreleri ekleyerek güncelle
                     string sorgu = "UPDATE Kullaniciler SET isim = @isim, soyisim = @soyisim, e_mail = @e_mail, sifre = @sifre, telefon = @telefon, fotograf = @fotograf WHERE id = @id";
+
                     using (SqlCommand komut = new SqlCommand(sorgu, connect))
                     {
                         komut.Parameters.AddWithValue("@id", LoginPage.GirisYapanKullaniciID);
@@ -115,21 +123,30 @@ namespace vtys
                         komut.Parameters.AddWithValue("@e_mail", emailBox.Text);
                         komut.Parameters.AddWithValue("@sifre", sifreBox.Text);
                         komut.Parameters.AddWithValue("@telefon", telefonBox.Text);
-                        komut.Parameters.AddWithValue("@fotograf", fotografBytes); // Byte dizisi olarak resmi ekleyin
+                        komut.Parameters.AddWithValue("@fotograf", fotografBytes);
 
-                        // Sorguyu çalıştır
                         komut.ExecuteNonQuery();
 
-                        // İşlem başarılı mesajını göster
                         MessageBox.Show("Bilgiler başarıyla güncellendi.");
                     }
-                    connect.Close();
                 }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Hatası oluştu: " + ex.Number + " - " + ex.Message);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Hata oluştu: " + ex.Message);
             }
-        }        
-    }
+            finally
+            {
+                // Bağlantının açık olup olmadığını kontrol et ve kapat
+                if (connect.State == ConnectionState.Open)
+                {
+                    connect.Close();
+                }
+            }
+        }
+    }        
 }

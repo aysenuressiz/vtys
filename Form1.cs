@@ -60,28 +60,33 @@ namespace vtys
                 // Kullanıcıyı bulmak için sorgu
                 string sorgu = "SELECT COUNT(*) FROM Kullaniciler WHERE e_mail = @e_mail AND sifre = @sifre";
 
-                using (SqlCommand komut = new SqlCommand(sorgu, connect)) { 
-                    
+                using (SqlCommand komut = new SqlCommand(sorgu, connect))
+                {
                     komut.Parameters.AddWithValue("@e_mail", e_mail);
                     komut.Parameters.AddWithValue("@sifre", sifre);
 
                     // Giriş yapan kullanıcının ID'sini al
-                    GirisYapanKullaniciID = Convert.ToInt32(komut.ExecuteScalar());
+                    object result = komut.ExecuteScalar();
 
-
-                    int kullaniciSayisi = (int)komut.ExecuteScalar();
-                    // Kullanıcının veri tabanında olup olmadığını kontrol et 
-                    if (kullaniciSayisi > 0){
-                        // Anasayfaya yönlendir
-                        HomePage form = new HomePage(); 
-                        this.Hide(); //Form1 i gizle
-                        form.Show();
-                    } else 
+                    if (result != null && result != DBNull.Value)
                     {
-                        MessageBox.Show("Bu kullanıcı bulunamadı."); 
+                        GirisYapanKullaniciID = Convert.ToInt32(result);
+
+                        int kullaniciSayisi = (int)result;
+                        // Kullanıcının veri tabanında olup olmadığını kontrol et 
+                        if (kullaniciSayisi > 0)
+                        {
+                            // Anasayfaya yönlendir
+                            HomePage form = new HomePage();
+                            this.Hide(); // Form1 i gizle
+                            form.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Bu kullanıcı bulunamadı.");
+                        }
                     }
                 }
-                connect.Close();
             }
             catch (Exception hata) {
                 MessageBox.Show("Hata meydana geldi!" + hata.Message);

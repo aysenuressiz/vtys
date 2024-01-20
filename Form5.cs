@@ -13,6 +13,8 @@ namespace vtys
 {
     public partial class ProjectAddPage : Form
     {
+        static string constring = "Data Source=UNIQUEA-PC\\SQLEXPRESS;Initial Catalog=ProjectTracker;Integrated Security=True";
+        SqlConnection connect = new SqlConnection(constring);
         public ProjectAddPage()
         {
             InitializeComponent();
@@ -24,8 +26,23 @@ namespace vtys
             {
                 // Kullanıcıdan alınan değerleri değişkenlere atayalım
                 string proje_adi = projeAdi.Text;
+
+                // Null kontrolü ekleyelim
+                if (string.IsNullOrWhiteSpace(proje_adi))
+                {
+                    MessageBox.Show("Lütfen geçerli bir proje adı girin.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 DateTime baslangic_tarihi = baslangicTarihi.Value;
                 DateTime bitis_tarihi = bitisTarihi.Value;
+
+                // Başlangıç tarihi ile bitiş tarihi kontrolü ekleyelim
+                if (baslangic_tarihi > bitis_tarihi)
+                {
+                    MessageBox.Show("Başlangıç tarihi, bitiş tarihinden sonra olmalıdır.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
                 // Veritabanı bağlantısı oluşturalım
                 string constring = "Data Source=UNIQUEA-PC\\SQLEXPRESS;Initial Catalog=ProjectTracker;Integrated Security=True";
@@ -46,16 +63,24 @@ namespace vtys
                         komut.ExecuteNonQuery();
 
                         // İşlem başarılı mesajını gösterelim
-                        MessageBox.Show("Proje başarıyla eklendi.");
+                        MessageBox.Show("Proje başarıyla eklendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    connect.Close();
                 }
             }
             catch (Exception hata)
             {
                 // Hata durumunda kullanıcıya bilgi verelim
-                MessageBox.Show("Hata meydana geldi!" + hata.Message);
+                MessageBox.Show("Hata meydana geldi: " + hata.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            finally
+            {
+                // Bağlantının açık olup olmadığını kontrol et ve kapat
+                if (connect.State == ConnectionState.Open)
+                {
+                    connect.Close();
+                }
+            }
+
         }
 
         private void geri_Click(object sender, EventArgs e)

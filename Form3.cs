@@ -26,8 +26,7 @@ namespace vtys
         {
             try
             {
-                if (connect.State == ConnectionState.Closed)
-                    connect.Open();
+                connect.Open();
 
                 // Giriş yapan kullanıcının projelerini çek
                 List<Project> projects = GetProjectsForUser(LoginPage.GirisYapanKullaniciID);
@@ -64,12 +63,12 @@ namespace vtys
                         }
                         else if (gecikme.Days < 0)
                         {
-                            // Süre geçtiyse, teslim tarihini bir gün uzat
-                            task.BitisTarihi = task.BitisTarihi.AddDays(1);
+                            int uzatmaGunSayisi = 1;
+                            task.BitisTarihi = task.BitisTarihi.AddDays(uzatmaGunSayisi);
 
                             // Yeni gecikmeyi hesapla
                             gecikme = task.BitisTarihi - DateTime.Now;
-                            sure = $"{Math.Abs(gecikme.Days)} gün geçti, teslim tarihi 1 gün uzatıldı";
+                            sure = $"{Math.Abs(gecikme.Days)} gün geçti, teslim tarihi {Math.Abs(gecikme.Days)} gün uzatıldı";
 
                             // Veritabanında teslim tarihini güncelle
                             UpdateTaskDueDateInDatabase(task.TaskID, task.BitisTarihi);
@@ -94,7 +93,15 @@ namespace vtys
                 // DataGridView'e DataTable'ı bağla
                 dataGridView1.DataSource = dataTable;
 
-                connect.Close();
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Hatası oluştu: " + ex.Message);
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show("IO Hatası oluştu: " + ex.Message);
             }
             catch (Exception ex)
             {
@@ -102,6 +109,7 @@ namespace vtys
             }
             finally
             {
+                // Bağlantının açık olup olmadığını kontrol et ve kapat
                 if (connect.State == ConnectionState.Open)
                 {
                     connect.Close(); // Hata durumunda da bağlantıyı kapat

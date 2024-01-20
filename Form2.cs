@@ -3,12 +3,16 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Net.Mail;
+using System.Data;
 
 namespace vtys
 {
     public partial class SignUpPage : Form
     {
         private bool sifreGizli = true;
+        // Veritabanı bağlantı dizesi
+        static string constring = "Data Source=UNIQUEA-PC\\SQLEXPRESS;Initial Catalog=ProjectTracker;Integrated Security=True";
+        SqlConnection connect = new SqlConnection(constring);
         public SignUpPage()
         {
             InitializeComponent();
@@ -58,8 +62,6 @@ namespace vtys
                     return;
                 }
 
-                // Veritabanı bağlantısı oluştur
-                string constring = "Data Source=UNIQUEA-PC\\SQLEXPRESS;Initial Catalog=ProjectTracker;Integrated Security=True";
                 using (SqlConnection connect = new SqlConnection(constring))
                 {
                     // Bağlantıyı aç
@@ -78,22 +80,27 @@ namespace vtys
                         komut.ExecuteNonQuery();
 
                         // İşlem başarılı mesajı
-                        MessageBox.Show("Kayıt başarıyla eklendi.Lütfen giriş yapınız.");
+                        MessageBox.Show("Kayıt başarıyla eklendi. Lütfen giriş yapınız.");
 
                         // Giriş ekranına yönlendirme
                         LoginPage form = new LoginPage();
                         this.Hide(); // Form2'yi gizle
                         form.ShowDialog();
                     }
-
-                    // Bağlantıyı kapat
-                    connect.Close();
                 }
             }
-            catch (Exception hata)
+            catch (Exception)
             {
-                // Hata durumunda kullanıcıya bilgi ver
-                MessageBox.Show("Hata meydana geldi!" + hata.Message);
+                // Hata durumunda kullanıcıya daha genel bir bilgi ver
+                MessageBox.Show("Kayıt sırasında bir hata oluştu. Lütfen tekrar deneyiniz.");
+            }
+            finally
+            {
+                // Bağlantıyı her durumda kapat
+                if (connect.State == ConnectionState.Open)
+                {
+                    connect.Close();
+                }
             }
         }
         private void sifreBox_TextChanged(object sender, EventArgs e)

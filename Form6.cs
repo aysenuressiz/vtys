@@ -41,11 +41,10 @@ namespace vtys
             catch (Exception ex)
             {
                 MessageBox.Show("Hata oluştu: " + ex.Message);
-
             }
         }
 
-        private void LoadEmployees() 
+        private void LoadEmployees()
         {
             try
             {
@@ -77,11 +76,25 @@ namespace vtys
                 int projeID = Convert.ToInt32(projeComboBox.SelectedValue);
                 int calisanID = Convert.ToInt32(calisanComboBox.SelectedValue);
                 string Gorev_adi = gorevAdi.Text;
+
+                // Null kontrolü ekleyelim
+                if (string.IsNullOrWhiteSpace(Gorev_adi))
+                {
+                    MessageBox.Show("Lütfen geçerli bir görev adı girin.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 DateTime baslangic_tarihi = baslangicTarihi.Value;
                 DateTime bitis_tarihi = bitisTarihi.Value;
 
+                // Başlangıç tarihi ile bitiş tarihi kontrolü ekleyelim
+                if (baslangic_tarihi > bitis_tarihi)
+                {
+                    MessageBox.Show("Başlangıç tarihi, bitiş tarihinden sonra olmalıdır.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 // Veritabanı bağlantısı oluşturalım
-                string constring = "Data Source=UNIQUEA-PC\\SQLEXPRESS;Initial Catalog=ProjectTracker;Integrated Security=True";
                 using (SqlConnection connect = new SqlConnection(constring))
                 {
                     connect.Open();
@@ -99,18 +112,23 @@ namespace vtys
                         komut.ExecuteNonQuery();
 
                         // İşlem başarılı mesajını gösterelim
-                        MessageBox.Show("Görev başarıyla eklendi.");
+                        MessageBox.Show("Görev başarıyla eklendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hata oluştu: " + ex.Message);
+                MessageBox.Show("Hata oluştu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                connect.Close();
+                // Bağlantının açık olup olmadığını kontrol et ve kapat
+                if (connect.State == ConnectionState.Open)
+                {
+                    connect.Close();
+                }
             }
+
         }
 
         private void geri_Click(object sender, EventArgs e)
