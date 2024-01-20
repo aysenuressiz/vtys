@@ -26,7 +26,8 @@ namespace vtys
         {
             try
             {
-                connect.Open();
+                if (connect.State == ConnectionState.Closed)
+                    connect.Open();
 
                 // Giriş yapan kullanıcının projelerini çek
                 List<Project> projects = GetProjectsForUser(LoginPage.GirisYapanKullaniciID);
@@ -35,12 +36,12 @@ namespace vtys
                 DataTable dataTable = new DataTable();
 
                 // DataTable'a sütunları ekle
-                dataTable.Columns.Add("GorevID"); // Yeni sütun: "GorevID"
+                dataTable.Columns.Add("GorevID");
                 dataTable.Columns.Add("Proje Adı");
                 dataTable.Columns.Add("Görev Adı");
                 dataTable.Columns.Add("Görev Durumu", typeof(bool)); // bool türünde bir sütun ekleyin
                 dataTable.Columns.Add("Bitiş Tarihi");
-                dataTable.Columns.Add("Süre"); // Gecikme Miktarı sütununun adını "Süre" olarak değiştir
+                dataTable.Columns.Add("Süre"); 
 
                 // DataTable'a verileri ekle
                 foreach (var project in projects)
@@ -99,6 +100,13 @@ namespace vtys
             {
                 MessageBox.Show("Hata oluştu: " + ex.Message);
             }
+            finally
+            {
+                if (connect.State == ConnectionState.Open)
+                {
+                    connect.Close(); // Hata durumunda da bağlantıyı kapat
+                }
+            }
         }
 
         private void UpdateTaskStatusInDatabase(int rowIndex, bool newStatus)
@@ -121,6 +129,7 @@ namespace vtys
 
                     command.ExecuteNonQuery();
                 }
+                connect.Close();
             }
             catch (Exception ex)
             {
@@ -128,7 +137,10 @@ namespace vtys
             }
             finally
             {
-                connect.Close();
+                if (connect.State == ConnectionState.Open)
+                {
+                    connect.Close(); // Hata durumunda da bağlantıyı kapat
+                }
             }
         }
 
@@ -138,16 +150,30 @@ namespace vtys
             {
                 connect.Open();
 
-                // Veritabanında görevin teslim tarihini güncelle
-                string updateQuery = "UPDATE Gorevler SET bitis_tarihi = @bitis_tarihi WHERE id = @id";
+                // Veritabanında görevin teslim tarihini ve durumunu güncelle
+                string updateQuery = "UPDATE Gorevler SET bitis_tarihi = @bitis_tarihi, durum = @durum WHERE id = @id";
 
                 using (SqlCommand command = new SqlCommand(updateQuery, connect))
                 {
                     command.Parameters.AddWithValue("@bitis_tarihi", newDueDate);
+
+                    // Görevin durumunu kontrol et ve gerekirse güncelle
+                    if (newDueDate < DateTime.Now)
+                    {
+                        // Eğer bitiş tarihi geçmişse ve görev tamamlanmamışsa, durumu "Devam Ediyor" olarak ayarla
+                        command.Parameters.AddWithValue("@durum", "Devam Ediyor");
+                    }
+                    else
+                    {
+                        // Bitiş tarihi geçmemişse ve görev tamamlanmamışsa, durumu "Tamamlanacak" olarak ayarla
+                        command.Parameters.AddWithValue("@durum", "Tamamlanacak");
+                    }
+
                     command.Parameters.AddWithValue("@id", taskID);
 
                     command.ExecuteNonQuery();
                 }
+                connect.Close();
             }
             catch (Exception ex)
             {
@@ -155,7 +181,10 @@ namespace vtys
             }
             finally
             {
-                connect.Close();
+                if (connect.State == ConnectionState.Open)
+                {
+                    connect.Close(); // Hata durumunda da bağlantıyı kapat
+                }
             }
         }
 
@@ -192,7 +221,15 @@ namespace vtys
                     int taskID = Convert.ToInt32(reader["TaskID"]);
                     string taskName = reader["TaskName"].ToString();
                     string taskStatus = reader["TaskStatus"].ToString();
-                    DateTime taskDueDate = Convert.ToDateTime(reader["TaskDueDate"]);
+                    DateTime taskDueDate;
+                    if (reader["TaskDueDate"] != DBNull.Value)
+                    {
+                        taskDueDate = Convert.ToDateTime(reader["TaskDueDate"]);
+                    }
+                    else
+                    {
+                        taskDueDate = DateTime.MinValue; // Veya başka bir değer
+                    }
                     DateTime? taskCompletionDate = reader["TaskCompletionDate"] as DateTime?;
 
                     // Proje daha önce eklenmiş mi?
@@ -235,6 +272,7 @@ namespace vtys
 
         private void hesabım_Click(object sender, EventArgs e)
         {
+            //Hesabım sayfasına yönlendir
             myAccountPage form1 = new myAccountPage();
             this.Hide(); // Form3'ü gizle
             form1.ShowDialog();
@@ -253,6 +291,7 @@ namespace vtys
 
         private void cikis_Click(object sender, EventArgs e)
         {
+            //Giriş sayfasına yönlendir
             LoginPage form1 = new LoginPage();
             this.Hide(); // Form3'ü gizle
             form1.ShowDialog();
@@ -260,6 +299,7 @@ namespace vtys
 
         private void projeEkle_Click(object sender, EventArgs e)
         {
+            //Proje ekle sayfasına yönlendir
             ProjectAddPage form1 = new ProjectAddPage();
             this.Hide(); // Form3'ü gizle
             form1.ShowDialog();
@@ -267,6 +307,7 @@ namespace vtys
 
         private void gorevEkle_Click(object sender, EventArgs e)
         {
+            //Görev ekle sayfasına yönlendir
             TaskAddPage form1 = new TaskAddPage();
             this.Hide(); // Form3'ü gizle
             form1.ShowDialog();
@@ -274,6 +315,7 @@ namespace vtys
 
         private void calisanlar_Click(object sender, EventArgs e)
         {
+            // Çalışanlar sayfasına yönlendir
             employeesPage form1 = new employeesPage();
             this.Hide(); // Form3'ü gizle
             form1.ShowDialog();

@@ -123,6 +123,7 @@ namespace vtys
                         // İşlem başarılı mesajını göster
                         MessageBox.Show("Bilgiler başarıyla güncellendi.");
                     }
+                    connect.Close();
                 }
             }
             catch (Exception ex)

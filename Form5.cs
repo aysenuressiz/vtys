@@ -48,6 +48,7 @@ namespace vtys
                         // İşlem başarılı mesajını gösterelim
                         MessageBox.Show("Proje başarıyla eklendi.");
                     }
+                    connect.Close();
                 }
             }
             catch (Exception hata)

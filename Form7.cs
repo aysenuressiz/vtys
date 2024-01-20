@@ -89,6 +89,7 @@ namespace vtys
                             MessageBox.Show("'durum' sütunu bulunamadı.");
                         }
                     }
+                    connect.Close();
                 }
             }
             catch (Exception ex)

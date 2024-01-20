@@ -85,6 +85,9 @@ namespace vtys
                         this.Hide(); // Form2'yi gizle
                         form.ShowDialog();
                     }
+
+                    // Bağlantıyı kapat
+                    connect.Close();
                 }
             }
             catch (Exception hata)

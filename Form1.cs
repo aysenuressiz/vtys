@@ -29,7 +29,8 @@ namespace vtys
         }
         
         private void girisButton_Click(object sender, EventArgs e){
-            try{
+            try
+            {
                 if (connect.State == ConnectionState.Closed)
                     connect.Open();
 
@@ -75,15 +76,22 @@ namespace vtys
                         HomePage form = new HomePage(); 
                         this.Hide(); //Form1 i gizle
                         form.Show();
-                    } else {
-                        MessageBox.Show("Bu kullanıcı bulunamadı."); }
+                    } else 
+                    {
+                        MessageBox.Show("Bu kullanıcı bulunamadı."); 
                     }
                 }
+                connect.Close();
+            }
             catch (Exception hata) {
                 MessageBox.Show("Hata meydana geldi!" + hata.Message);
             }
-            finally {
-                connect.Close();
+            finally 
+            {
+                if (connect.State == ConnectionState.Open)
+                {
+                    connect.Close(); // Hata durumunda da bağlantıyı kapat
+                }
             }
         }
         private void sifreBox_TextChanged(object sender, EventArgs e)
