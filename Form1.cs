@@ -17,14 +17,17 @@ namespace vtys
         private bool sifreGizli = true;
         // Giriş yapan kullanıcının ID'sini saklamak için global değişken
         public static int GirisYapanKullaniciID;
+
+        // Veritabanı bağlantı dizesi
+        static string constring = "Data Source=UNIQUEA-PC\\SQLEXPRESS;Initial Catalog=ProjectTracker;Integrated Security=True";
+        SqlConnection connect = new SqlConnection(constring);
+
         public LoginPage()
         {
             InitializeComponent();
             sifreBox.UseSystemPasswordChar = true;
         }
-        static string constring = "Data Source=UNIQUEA-PC\\SQLEXPRESS;Initial Catalog=ProjectTracker;Integrated Security=True";
-        SqlConnection connect = new SqlConnection(constring);
-
+        
         private void girisButton_Click(object sender, EventArgs e){
             try{
                 if (connect.State == ConnectionState.Closed)
@@ -38,19 +41,19 @@ namespace vtys
                 if (string.IsNullOrWhiteSpace(e_mail) && string.IsNullOrWhiteSpace(sifre))
                 {
                     MessageBox.Show("Kullanıcı adı ve şifre boş olamaz!");
-                    return; // Fonksiyonu burada sonlandır
+                    return; 
                 }
 
                 if (string.IsNullOrWhiteSpace(e_mail))
                 {
                     MessageBox.Show("Kullanıcı adı boş olamaz!");
-                    return; // Fonksiyonu burada sonlandır
+                    return; 
                 }
 
                 if (string.IsNullOrWhiteSpace(sifre))
                 {
                     MessageBox.Show("Şifre boş olamaz!");
-                    return; // Fonksiyonu burada sonlandır
+                    return; 
                 }
 
                 // Kullanıcıyı bulmak için sorgu
@@ -66,11 +69,10 @@ namespace vtys
 
 
                     int kullaniciSayisi = (int)komut.ExecuteScalar();
-
+                    // Kullanıcının veri tabanında olup olmadığını kontrol et 
                     if (kullaniciSayisi > 0){
-
-                        
-                        HomePage form = new HomePage();
+                        // Anasayfaya yönlendir
+                        HomePage form = new HomePage(); 
                         this.Hide();
                         form.Show();
                     } else {
@@ -89,8 +91,7 @@ namespace vtys
             // Şifre kutusundaki metni güncellediğimizde, her karakterin yerine '*' ekleyerek gerçek zamanlı gösterim sağla
             if (sifreGizli)
             {
-                // Şifre kutusundaki metni '*' karakterleriyle değiştir
-                string yildizliSifre = new string('*', sifreBox.Text.Length);
+                string yildizliSifre = new string('*', sifreBox.Text.Length);// Şifre kutusundaki metni '*' karakterleriyle değiştir
                 sifreBox.UseSystemPasswordChar = false; // Karakter değiştirme işlemi yapılırken özelliği geçici olarak kapat
                 sifreBox.Text = yildizliSifre;
                 sifreBox.Select(yildizliSifre.Length, 0); // Cursor'ı metnin sonuna getir
@@ -107,16 +108,11 @@ namespace vtys
 
         private void kayitbutton_Click(object sender, EventArgs e)
         {
+            // Kayıt Ol sayfasına yönlendir
             SignUpPage form2 = new SignUpPage();
             this.Hide();
             form2.Show();
         }
-
-        private void LoginPage_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }
 
