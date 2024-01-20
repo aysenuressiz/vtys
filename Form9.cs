@@ -15,7 +15,7 @@ namespace vtys
     public partial class UpdateEmployeePage : Form
     {
         private static string constring = "Data Source=UNIQUEA-PC\\SQLEXPRESS;Initial Catalog=ProjectTracker;Integrated Security=True";
-        private int employeeID; // Seçilen çalışanın ID'sini saklamak için
+        private int selectedUserID;
 
         public UpdateEmployeePage()
         {
@@ -23,7 +23,7 @@ namespace vtys
         }
         public void SetEmployeeID(int selectedEmployeeID)
         {
-            employeeID = selectedEmployeeID;
+            selectedUserID = selectedEmployeeID;
             LoadUserData();
         }
         private void LoadUserData()
@@ -38,7 +38,7 @@ namespace vtys
 
                     using (SqlCommand komut = new SqlCommand(query, connect))
                     {
-                        komut.Parameters.AddWithValue("@id", employeeID);
+                        komut.Parameters.AddWithValue("@id", selectedUserID);
 
                         SqlDataReader reader = komut.ExecuteReader();
 
@@ -81,7 +81,7 @@ namespace vtys
 
                     using (SqlCommand komut = new SqlCommand(sorgu, connect))
                     {
-                        komut.Parameters.AddWithValue("@id", employeeID);
+                        komut.Parameters.AddWithValue("@id", selectedUserID);
                         komut.Parameters.AddWithValue("@isim", isimBox.Text);
                         komut.Parameters.AddWithValue("@soyisim", soyisimBox.Text);
                         komut.Parameters.AddWithValue("@e_mail", mailBox.Text);
@@ -94,7 +94,7 @@ namespace vtys
 
                     connect.Close();
                 }
-                this.Hide();
+                this.Hide(); // Formu gizle
             }
             catch (Exception ex)
             {

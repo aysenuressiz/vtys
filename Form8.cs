@@ -171,8 +171,10 @@ namespace vtys
 
         private void guncelle_Click(object sender, EventArgs e)
         {
-            UpdateEmployeePage form1 = new UpdateEmployeePage();
-            form1.ShowDialog();
+            UpdateEmployeePage form = new UpdateEmployeePage();
+            int selectedUserID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value);
+            form.SetEmployeeID(selectedUserID);
+            form.ShowDialog();
         }
     }
 }
