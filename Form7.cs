@@ -32,11 +32,8 @@ namespace vtys
         {
             try
             {
-                string constring = "Data Source=UNIQUEA-PC\\SQLEXPRESS;Initial Catalog=ProjectTracker;Integrated Security=True";
                 using (SqlConnection connect = new SqlConnection(constring))
                 {
-                    connect.Open();
-
                     string query = "SELECT P.proje_adi, G.Gorev_adi, G.baslangic_tarihi, G.bitis_tarihi, G.durum " +
                                     "FROM Kullaniciler K " +
                                     "JOIN Gorevler G ON K.id = G.calisanID " +
@@ -54,22 +51,12 @@ namespace vtys
                         // DataGridView'e kullanıcının görev bilgilerini bind et
                         dataGridView1.DataSource = userTasks;
                     }
-                    connect.Close();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Hata oluştu: " + ex.Message);
             }
-            finally
-            {
-                // Bağlantının açık olup olmadığını kontrol et ve kapat
-                if (connect.State == ConnectionState.Open)
-                {
-                    connect.Close();
-                }
-            }
-
         }
 
         private void CustomizeDataGridView(DataGridView dataGridView)

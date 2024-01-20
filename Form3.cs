@@ -14,8 +14,9 @@ namespace vtys
 {
     public partial class HomePage : Form
     {
-        private static string constring = "Data Source=UNIQUEA-PC\\SQLEXPRESS;Initial Catalog=ProjectTracker;Integrated Security=True";
-        private SqlConnection connect = new SqlConnection(constring);
+        private static readonly string Constring = "Data Source=UNIQUEA-PC\\SQLEXPRESS;Initial Catalog=ProjectTracker;Integrated Security=True";
+        private readonly SqlConnection _connect = new SqlConnection(Constring);
+
 
         public HomePage()
         {
@@ -26,21 +27,20 @@ namespace vtys
         {
             try
             {
-                connect.Open();
+                _connect.Open();
 
                 // Giriş yapan kullanıcının projelerini çek
                 List<Project> projects = GetProjectsForUser(LoginPage.GirisYapanKullaniciID);
 
                 // DataGridView için bir DataTable oluştur
-                DataTable dataTable = new DataTable();
-
-                // DataTable'a sütunları ekle
-                dataTable.Columns.Add("GorevID");
-                dataTable.Columns.Add("Proje Adı");
-                dataTable.Columns.Add("Görev Adı");
-                dataTable.Columns.Add("Görev Durumu", typeof(bool)); // bool türünde bir sütun ekleyin
-                dataTable.Columns.Add("Bitiş Tarihi");
-                dataTable.Columns.Add("Süre"); 
+                DataTable dataTable = new DataTable
+                {
+                    Columns =
+                    {
+                        "GorevID", "Proje Adı", "Görev Adı", new DataColumn("Görev Durumu", typeof(bool)),
+                        "Bitiş Tarihi", "Süre"
+                    }
+                };
 
                 // DataTable'a verileri ekle
                 foreach (var project in projects)
@@ -63,15 +63,7 @@ namespace vtys
                         }
                         else if (gecikme.Days < 0)
                         {
-                            int uzatmaGunSayisi = 1;
-                            task.BitisTarihi = task.BitisTarihi.AddDays(uzatmaGunSayisi);
-
-                            // Yeni gecikmeyi hesapla
-                            gecikme = task.BitisTarihi - DateTime.Now;
-                            sure = $"{Math.Abs(gecikme.Days)} gün geçti, teslim tarihi {Math.Abs(gecikme.Days)} gün uzatıldı";
-
-                            // Veritabanında teslim tarihini güncelle
-                            UpdateTaskDueDateInDatabase(task.TaskID, task.BitisTarihi);
+                            sure = CalculateDelay(task, gecikme);
                         }
                         else
                         {
@@ -79,21 +71,23 @@ namespace vtys
                         }
 
                         // DataTable'a yeni satır ekle
-                        dataTable.Rows.Add(task.TaskID, project.ProjeAdi, task.GorevAdi, !task.Tamamlandi, task.BitisTarihi.ToShortDateString(), sure);
+                        dataTable.Rows.Add(task.TaskID, project.ProjeAdi, task.GorevAdi, !task.Tamamlandi,
+                            task.BitisTarihi.ToShortDateString(), sure);
                     }
                 }
 
                 // DataGridView için özel bir hücre şablonu oluştur
-                DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
-                checkBoxColumn.HeaderText = "Görev Durumu";
-                checkBoxColumn.Name = "GorevDurumu";
-                checkBoxColumn.DataPropertyName = "Görev Durumu";
+                var checkBoxColumn = new DataGridViewCheckBoxColumn
+                {
+                    HeaderText = "Görev Durumu",
+                    Name = "GorevDurumu",
+                    DataPropertyName = "Görev Durumu"
+                };
+
                 dataGridView1.Columns.Add(checkBoxColumn);
 
                 // DataGridView'e DataTable'ı bağla
                 dataGridView1.DataSource = dataTable;
-                connect.Close();
-
             }
             catch (SqlException ex)
             {
@@ -110,34 +104,38 @@ namespace vtys
             finally
             {
                 // Bağlantının açık olup olmadığını kontrol et ve kapat
-                if (connect.State == ConnectionState.Open)
+                if (_connect.State == ConnectionState.Open)
                 {
-                    connect.Close(); // Hata durumunda da bağlantıyı kapat
+                    _connect.Close(); // Hata durumunda da bağlantıyı kapat
                 }
             }
+        }
+        private static string CalculateDelay(Task task, TimeSpan gecikme)
+        {
+            const int uzatmaGunSayisi = 1;
+            task.BitisTarihi = task.BitisTarihi.AddDays(uzatmaGunSayisi);
+
+            // Yeni gecikmeyi hesapla
+            gecikme = task.BitisTarihi - DateTime.Now;
+            return $"{Math.Abs(gecikme.Days)} gün geçti, teslim tarihi {Math.Abs(gecikme.Days)} gün uzatıldı";
         }
 
         private void UpdateTaskStatusInDatabase(int rowIndex, bool newStatus)
         {
             try
             {
-                connect.Open();
-
-                // DataGridView'deki görevin ID'sini al
-                int taskID = GetTaskIDFromDataGridView(rowIndex);
-
-                // Veritabanında görevin durumunu ve tamamlanma tarihini güncelle
-                string updateQuery = "UPDATE Gorevler SET durum = @durum, bitis_tarihi = @bitis_tarihi WHERE id = @id";
-
-                using (SqlCommand command = new SqlCommand(updateQuery, connect))
+                using (var command = new SqlCommand())
                 {
+                    command.CommandText =
+                        "UPDATE Gorevler SET durum = @durum, bitis_tarihi = @bitis_tarihi WHERE id = @id";
                     command.Parameters.AddWithValue("@durum", newStatus ? "Tamamlandı" : "Devam Ediyor");
-                    command.Parameters.AddWithValue("@bitis_tarihi", newStatus ? DateTime.Now : (object)DBNull.Value); // Görev tamamlanmadıysa null olarak ayarla
-                    command.Parameters.AddWithValue("@id", taskID);
+                    command.Parameters.AddWithValue("@bitis_tarihi",
+                        newStatus ? DateTime.Now : (object)DBNull.Value); // Görev tamamlanmadıysa null olarak ayarla
+                    command.Parameters.AddWithValue("@id", GetTaskIDFromDataGridView(rowIndex));
 
+                    _connect.Open();
                     command.ExecuteNonQuery();
                 }
-                connect.Close();
             }
             catch (Exception ex)
             {
@@ -145,9 +143,9 @@ namespace vtys
             }
             finally
             {
-                if (connect.State == ConnectionState.Open)
+                if (_connect.State == ConnectionState.Open)
                 {
-                    connect.Close(); // Hata durumunda da bağlantıyı kapat
+                    _connect.Close(); // Hata durumunda da bağlantıyı kapat
                 }
             }
         }
@@ -156,32 +154,24 @@ namespace vtys
         {
             try
             {
-                connect.Open();
+                _connect.Open();
 
                 // Veritabanında görevin teslim tarihini ve durumunu güncelle
-                string updateQuery = "UPDATE Gorevler SET bitis_tarihi = @bitis_tarihi, durum = @durum WHERE id = @id";
+                const string updateQuery =
+                    "UPDATE Gorevler SET bitis_tarihi = @bitis_tarihi, durum = @durum WHERE id = @id";
 
-                using (SqlCommand command = new SqlCommand(updateQuery, connect))
+                using (var command = new SqlCommand(updateQuery, _connect))
                 {
                     command.Parameters.AddWithValue("@bitis_tarihi", newDueDate);
 
                     // Görevin durumunu kontrol et ve gerekirse güncelle
-                    if (newDueDate < DateTime.Now)
-                    {
-                        // Eğer bitiş tarihi geçmişse ve görev tamamlanmamışsa, durumu "Devam Ediyor" olarak ayarla
-                        command.Parameters.AddWithValue("@durum", "Devam Ediyor");
-                    }
-                    else
-                    {
-                        // Bitiş tarihi geçmemişse ve görev tamamlanmamışsa, durumu "Tamamlanacak" olarak ayarla
-                        command.Parameters.AddWithValue("@durum", "Tamamlanacak");
-                    }
+                    command.Parameters.AddWithValue("@durum",
+                        newDueDate < DateTime.Now ? "Devam Ediyor" : "Tamamlanacak");
 
                     command.Parameters.AddWithValue("@id", taskID);
 
                     command.ExecuteNonQuery();
                 }
-                connect.Close();
             }
             catch (Exception ex)
             {
@@ -189,9 +179,9 @@ namespace vtys
             }
             finally
             {
-                if (connect.State == ConnectionState.Open)
+                if (_connect.State == ConnectionState.Open)
                 {
-                    connect.Close(); // Hata durumunda da bağlantıyı kapat
+                    _connect.Close(); // Hata durumunda da bağlantıyı kapat
                 }
             }
         }
@@ -199,27 +189,26 @@ namespace vtys
         private int GetTaskIDFromDataGridView(int rowIndex)
         {
             // DataGridView'deki görevin ID'sini al
-            DataGridViewRow selectedRow = dataGridView1.Rows[rowIndex];
-            int taskID = Convert.ToInt32(selectedRow.Cells["GorevID"].Value); // "GorevID" sütununu kullanın
-
-            return taskID;
+            var selectedRow = dataGridView1.Rows[rowIndex];
+            return Convert.ToInt32(selectedRow.Cells["GorevID"].Value); // "GorevID" sütununu kullanın
         }
 
         private List<Project> GetProjectsForUser(int kullaniciID)
         {
-            List<Project> projects = new List<Project>();
+            var projects = new List<Project>();
 
             // Kullanıcının projelerini çeken SQL sorgusu
-            string projectQuery = "SELECT P.id AS ProjectID, P.proje_adi AS ProjectName, " +
-                                  "G.id AS TaskID, G.gorev_adi AS TaskName, G.durum AS TaskStatus, G.bitis_tarihi AS TaskDueDate, G.bitis_tarihi AS TaskCompletionDate " +
-                                  "FROM Projeler P " +
-                                  "LEFT JOIN Gorevler G ON P.id = G.projeID " +
-                                  "WHERE G.calisanID = @kullaniciID";
+            const string projectQuery =
+                "SELECT P.id AS ProjectID, P.proje_adi AS ProjectName, " +
+                "G.id AS TaskID, G.gorev_adi AS TaskName, G.durum AS TaskStatus, G.bitis_tarihi AS TaskDueDate, G.bitis_tarihi AS TaskCompletionDate " +
+                "FROM Projeler P " +
+                "LEFT JOIN Gorevler G ON P.id = G.projeID " +
+                "WHERE G.calisanID = @kullaniciID";
 
-            using (SqlCommand command = new SqlCommand(projectQuery, connect))
+            using (var command = new SqlCommand(projectQuery, _connect))
             {
                 command.Parameters.AddWithValue("@kullaniciID", kullaniciID);
-                SqlDataReader reader = command.ExecuteReader();
+                var reader = command.ExecuteReader();
 
                 while (reader.Read())
                 {
@@ -238,20 +227,35 @@ namespace vtys
                     {
                         taskDueDate = DateTime.MinValue; // Veya başka bir değer
                     }
+
                     DateTime? taskCompletionDate = reader["TaskCompletionDate"] as DateTime?;
 
                     // Proje daha önce eklenmiş mi?
-                    Project existingProject = projects.Find(p => p.ProjectID == projectID);
+                    var existingProject = projects.Find(p => p.ProjectID == projectID);
                     if (existingProject != null)
                     {
                         // Var olan projeye görevi ekle
-                        existingProject.Tasks.Add(new Task { TaskID = taskID, GorevAdi = taskName, Durum = taskStatus, BitisTarihi = taskDueDate, Tamamlandi = taskCompletionDate.HasValue });
+                        existingProject.Tasks.Add(new Task
+                        {
+                            TaskID = taskID,
+                            GorevAdi = taskName,
+                            Durum = taskStatus,
+                            BitisTarihi = taskDueDate,
+                            Tamamlandi = taskCompletionDate.HasValue
+                        });
                     }
                     else
                     {
                         // Yeni bir proje oluştur ve görevi ekle
-                        Project newProject = new Project { ProjectID = projectID, ProjeAdi = projectName };
-                        newProject.Tasks.Add(new Task { TaskID = taskID, GorevAdi = taskName, Durum = taskStatus, BitisTarihi = taskDueDate, Tamamlandi = taskCompletionDate.HasValue });
+                        var newProject = new Project { ProjectID = projectID, ProjeAdi = projectName };
+                        newProject.Tasks.Add(new Task
+                        {
+                            TaskID = taskID,
+                            GorevAdi = taskName,
+                            Durum = taskStatus,
+                            BitisTarihi = taskDueDate,
+                            Tamamlandi = taskCompletionDate.HasValue
+                        });
                         projects.Add(newProject);
                     }
                 }
@@ -334,7 +338,7 @@ namespace vtys
             // Tıklanan hücre bir CheckBox hücresi mi kontrol et
             if (e.ColumnIndex == dataGridView1.Columns["GorevDurumu"].Index && e.RowIndex >= 0)
             {
-                DataGridViewCheckBoxCell checkBoxCell = dataGridView1.Rows[e.RowIndex].Cells["GorevDurumu"] as DataGridViewCheckBoxCell;
+                var checkBoxCell = dataGridView1.Rows[e.RowIndex].Cells["GorevDurumu"] as DataGridViewCheckBoxCell;
 
                 // CheckBox değerini tersine çevir
                 checkBoxCell.Value = !(bool)checkBoxCell.Value;

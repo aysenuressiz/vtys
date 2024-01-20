@@ -87,7 +87,6 @@ namespace vtys
                         this.Hide(); // Form2'yi gizle
                         form.ShowDialog();
                     }
-                    connect.Close();
                 }
             }
             catch (Exception)

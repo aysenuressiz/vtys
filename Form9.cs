@@ -100,7 +100,6 @@ namespace vtys
             {
                 MessageBox.Show("Bilgiler güncellenirken hata oluştu: " + ex.Message);
             }
-
         }
     }
 }

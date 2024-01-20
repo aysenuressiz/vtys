@@ -86,7 +86,6 @@ namespace vtys
                         }
                     }
                 }
-                connect.Close();
             }
             catch (Exception hata) {
                 MessageBox.Show("Hata meydana geldi!" + hata.Message);

@@ -86,7 +86,6 @@ namespace vtys
                             }
                         }
                     }
-                    connect.Close();
                 }
             }
             catch (SqlException ex)
@@ -130,7 +129,6 @@ namespace vtys
 
                         MessageBox.Show("Bilgiler başarıyla güncellendi.");
                     }
-                    connect.Close();
                 }
             }
             catch (SqlException ex)
