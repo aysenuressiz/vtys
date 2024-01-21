@@ -346,33 +346,33 @@ namespace vtys
         private void cikis_Click(object sender, EventArgs e)
         {
             //Giriş sayfasına yönlendir
-            LoginPage form1 = new LoginPage();
+            LoginPage form = new LoginPage();
             this.Hide(); // Form3'ü gizle
-            form1.ShowDialog();
+            form.ShowDialog();
         }
 
         private void projeEkle_Click(object sender, EventArgs e)
         {
             //Proje ekle sayfasına yönlendir
-            ProjectAddPage form1 = new ProjectAddPage();
+            ProjectAddPage form = new ProjectAddPage();
             this.Hide(); // Form3'ü gizle
-            form1.ShowDialog();
+            form.ShowDialog();
         }
 
         private void gorevEkle_Click(object sender, EventArgs e)
         {
             //Görev ekle sayfasına yönlendir
-            TaskAddPage form1 = new TaskAddPage();
+            TaskAddPage form = new TaskAddPage();
             this.Hide(); // Form3'ü gizle
-            form1.ShowDialog();
+            form.ShowDialog();
         }
 
         private void calisanlar_Click(object sender, EventArgs e)
         {
             // Çalışanlar sayfasına yönlendir
-            employeesPage form1 = new employeesPage();
+            employeesPage form = new employeesPage();
             this.Hide(); // Form3'ü gizle
-            form1.ShowDialog();
+            form.ShowDialog();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
