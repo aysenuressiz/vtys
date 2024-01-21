@@ -203,7 +203,6 @@
             this.lblTamamlananGorevSayisi.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
             this.lblTamamlananGorevSayisi.Size = new System.Drawing.Size(315, 32);
             this.lblTamamlananGorevSayisi.TabIndex = 27;
-            this.lblTamamlananGorevSayisi.Click += new System.EventHandler(this.label5_Click);
             // 
             // HomePage
             // 
