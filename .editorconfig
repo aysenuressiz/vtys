@@ -8,3 +8,6 @@ dotnet_style_require_accessibility_modifiers = never
 
 # IDE0044: Salt okunur değiştirici ekle
 dotnet_diagnostic.IDE0044.severity = none
+
+# CS0162: Ulaşılamayan kod algılandı
+dotnet_diagnostic.CS0162.severity = silent

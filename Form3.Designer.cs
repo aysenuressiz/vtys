@@ -38,6 +38,9 @@
             this.calisanlar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
+            this.lblTamamlanacakGorevSayisi = new System.Windows.Forms.Label();
+            this.lblDevamEdenGorevSayisi = new System.Windows.Forms.Label();
+            this.lblTamamlananGorevSayisi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,7 +102,7 @@
             this.projeEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.projeEkle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projeEkle.ForeColor = System.Drawing.Color.DimGray;
-            this.projeEkle.Location = new System.Drawing.Point(360, 130);
+            this.projeEkle.Location = new System.Drawing.Point(156, 122);
             this.projeEkle.Name = "projeEkle";
             this.projeEkle.Size = new System.Drawing.Size(161, 161);
             this.projeEkle.TabIndex = 16;
@@ -115,7 +118,7 @@
             this.gorevEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gorevEkle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gorevEkle.ForeColor = System.Drawing.Color.DimGray;
-            this.gorevEkle.Location = new System.Drawing.Point(581, 130);
+            this.gorevEkle.Location = new System.Drawing.Point(377, 122);
             this.gorevEkle.Name = "gorevEkle";
             this.gorevEkle.Size = new System.Drawing.Size(161, 161);
             this.gorevEkle.TabIndex = 17;
@@ -131,7 +134,7 @@
             this.calisanlar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.calisanlar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calisanlar.ForeColor = System.Drawing.Color.DimGray;
-            this.calisanlar.Location = new System.Drawing.Point(794, 130);
+            this.calisanlar.Location = new System.Drawing.Point(590, 122);
             this.calisanlar.Name = "calisanlar";
             this.calisanlar.Size = new System.Drawing.Size(161, 161);
             this.calisanlar.TabIndex = 18;
@@ -165,6 +168,43 @@
             this.label12.TabIndex = 24;
             this.label12.Text = "ANA SAYFA";
             // 
+            // lblTamamlanacakGorevSayisi
+            // 
+            this.lblTamamlanacakGorevSayisi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTamamlanacakGorevSayisi.BackColor = System.Drawing.Color.DarkRed;
+            this.lblTamamlanacakGorevSayisi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTamamlanacakGorevSayisi.ForeColor = System.Drawing.Color.White;
+            this.lblTamamlanacakGorevSayisi.Location = new System.Drawing.Point(829, 131);
+            this.lblTamamlanacakGorevSayisi.Name = "lblTamamlanacakGorevSayisi";
+            this.lblTamamlanacakGorevSayisi.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
+            this.lblTamamlanacakGorevSayisi.Size = new System.Drawing.Size(315, 32);
+            this.lblTamamlanacakGorevSayisi.TabIndex = 25;
+            // 
+            // lblDevamEdenGorevSayisi
+            // 
+            this.lblDevamEdenGorevSayisi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDevamEdenGorevSayisi.BackColor = System.Drawing.Color.Goldenrod;
+            this.lblDevamEdenGorevSayisi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDevamEdenGorevSayisi.ForeColor = System.Drawing.Color.White;
+            this.lblDevamEdenGorevSayisi.Location = new System.Drawing.Point(829, 182);
+            this.lblDevamEdenGorevSayisi.Name = "lblDevamEdenGorevSayisi";
+            this.lblDevamEdenGorevSayisi.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
+            this.lblDevamEdenGorevSayisi.Size = new System.Drawing.Size(315, 32);
+            this.lblDevamEdenGorevSayisi.TabIndex = 26;
+            // 
+            // lblTamamlananGorevSayisi
+            // 
+            this.lblTamamlananGorevSayisi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTamamlananGorevSayisi.BackColor = System.Drawing.Color.DarkGreen;
+            this.lblTamamlananGorevSayisi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTamamlananGorevSayisi.ForeColor = System.Drawing.Color.White;
+            this.lblTamamlananGorevSayisi.Location = new System.Drawing.Point(829, 234);
+            this.lblTamamlananGorevSayisi.Name = "lblTamamlananGorevSayisi";
+            this.lblTamamlananGorevSayisi.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
+            this.lblTamamlananGorevSayisi.Size = new System.Drawing.Size(315, 32);
+            this.lblTamamlananGorevSayisi.TabIndex = 27;
+            this.lblTamamlananGorevSayisi.Click += new System.EventHandler(this.label5_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -172,6 +212,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1282, 668);
+            this.Controls.Add(this.lblTamamlananGorevSayisi);
+            this.Controls.Add(this.lblDevamEdenGorevSayisi);
+            this.Controls.Add(this.lblTamamlanacakGorevSayisi);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
@@ -199,5 +242,8 @@
         private System.Windows.Forms.Button calisanlar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblTamamlanacakGorevSayisi;
+        private System.Windows.Forms.Label lblDevamEdenGorevSayisi;
+        private System.Windows.Forms.Label lblTamamlananGorevSayisi;
     }
 }
