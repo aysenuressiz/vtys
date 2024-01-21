@@ -121,9 +121,9 @@ namespace vtys
         private void kayitbutton_Click(object sender, EventArgs e)
         {
             // Kayıt Ol sayfasına yönlendir
-            SignUpPage form2 = new SignUpPage();
+            SignUpPage form = new SignUpPage();
             this.Hide(); // Form1 i Gizle
-            form2.Show();
+            form.Show();
         }
     }
 }

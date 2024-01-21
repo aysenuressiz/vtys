@@ -116,15 +116,15 @@ namespace vtys
 
         private void geri_Click(object sender, EventArgs e)
         {
-            HomePage form1 = new HomePage();
+            HomePage form = new HomePage();
             this.Hide(); 
-            form1.ShowDialog();
+            form.ShowDialog();
         }
 
         private void ekle_Click(object sender, EventArgs e)
         {
-            AddEmployePage form1 = new AddEmployePage();
-            form1.ShowDialog(); 
+            AddEmployePage form = new AddEmployePage();
+            form.ShowDialog(); 
         }
 
         private void sil_Click(object sender, EventArgs e)

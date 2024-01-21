@@ -161,9 +161,9 @@ namespace vtys
         private void geri_Click(object sender, EventArgs e)
         {
             //Giriş sayfasına yönlendir
-            LoginPage form1 = new LoginPage();
+            LoginPage form = new LoginPage();
             this.Hide(); // Form2'yi gizle
-            form1.ShowDialog();
+            form.ShowDialog();
         }
 
     }

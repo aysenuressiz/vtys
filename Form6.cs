@@ -133,9 +133,9 @@ namespace vtys
 
         private void geri_Click(object sender, EventArgs e)
         {
-            HomePage form1 = new HomePage();
+            HomePage form = new HomePage();
             this.Hide(); // Form6'yı gizle
-            form1.ShowDialog();
+            form.ShowDialog();
         }
     }
 }
