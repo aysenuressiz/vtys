@@ -86,7 +86,7 @@ namespace vtys
         private void geri_Click(object sender, EventArgs e)
         {
             HomePage form1 = new HomePage();
-            this.Hide(); // Form2'yi gizle
+            this.Hide(); // Form5'i gizle
             form1.ShowDialog();
         }
     }

@@ -108,9 +108,9 @@ namespace vtys
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int selectedUserID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value);
-            EmployeeDetailPage form9 = new EmployeeDetailPage(selectedUserID);
+            EmployeeDetailPage form = new EmployeeDetailPage(selectedUserID);
             this.Hide();
-            form9.ShowDialog();
+            form.ShowDialog();
         }
 
 
